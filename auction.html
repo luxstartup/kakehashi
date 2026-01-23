@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction - KAKEHASHI Luxembourg</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #be123c;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-light);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Auction Layout - FIXED for responsiveness */
+        .auction-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allows stacking on small screens */
+            gap: 40px;
+            margin-top: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Left Side: Gallery */
+        .auction-gallery {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 400px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag-1yen {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .thumb {
+            height: 80px;
+            background: #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            overflow: hidden;
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+
+        .thumb:hover {
+            opacity: 1;
+            border: 2px solid var(--primary);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Right Side: Info */
+        .auction-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .time-left {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .current-bid-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .bid-amount {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .bid-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .input-bid {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .btn-bid {
+            flex: 1;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn-bid:hover {
+            background: var(--accent);
+        }
+
+        /* Detail Images Section */
+        .detail-images-section {
+            margin-top: 40px;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .detail-img {
+            height: 200px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .detail-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .detail-img:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-flex">
+            <div class="logo">KAKEHASHI <span>Auction</span></div>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="auction-container">
+
+            <div class="auction-gallery">
+                <div class="main-image">
+                    <div class="tag-1yen">1€ START</div>
+                    <img src="images/pokemon_cards.png" alt="Pokemon Cards">
+                </div>
+                <div class="thumbnail-grid">
+                    <div class="thumb"><img src="images/pokemon_card_front.png" alt="Front"></div>
+                    <div class="thumb"><img src="images/pokemon_card_back.png" alt="Back"></div>
+                    <div class="thumb"><img src="images/pokemon_card_corner.png" alt="Corner"></div>
+                    <div class="thumb"><img src="images/pokemon_card_holo.png" alt="Holo Effect"></div>
+                </div>
+            </div>
+
+            <div class="auction-info">
+                <div class="time-left">⏰ Ends in: 02h 14m 30s</div>
+
+                <h1 style="margin: 0 0 5px 0; font-size: 1.8rem; color: var(--primary);">Vintage Pokemon Cards (Set of
+                    10)</h1>
+                <p style="color: #666; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                    Authentic Japanese version from 1999. Near Mint condition. <br>
+                    <strong>Location:</strong> Luxembourg City (Pick-up available)
+                </p>
+
+                <div class="current-bid-box">
+                    <div style="font-size: 0.9rem; color: #64748b;">Current Highest Bid</div>
+                    <div class="bid-amount">34.00 €</div>
+                    <div style="font-size: 0.8rem; color: #999;">(12 Bids)</div>
+
+                    <form class="bid-actions" onsubmit="alert('Please login to place a bid!'); return false;">
+                        <input type="number" class="input-bid" placeholder="Ex: 35" min="35">
+                        <button type="submit" class="btn-bid">Place Bid</button>
+                    </form>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h4 style="margin-bottom: 10px;">Bid History</h4>
+                    <div
+                        style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 5px 0; font-size: 0.9rem;">
+                        <span>User***88</span> <span>34.00 €</span>
+                    </div>
+                    <div
+                        style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 5px 0; font-size: 0.9rem;">
+                        <span>M.Tanaka</span> <span>32.50 €</span>
+                    </div>
+                    <div
+                        style="display: flex; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 5px 0; font-size: 0.9rem;">
+                        <span>LuxLover</span> <span>25.00 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-images-section">
+            <h3 style="border-left: 4px solid var(--accent); padding-left: 10px;">Item Details & Condition</h3>
+            <p>Please check the condition of the cards in the photos below. These are actual photos of the item located
+                in Luxembourg.</p>
+
+            <div class="detail-grid">
+                <div class="detail-img"><img src="images/pokemon_card_front.png" alt="Front"></div>
+                <div class="detail-img"><img src="images/pokemon_card_back.png" alt="Back"></div>
+                <div class="detail-img"><img src="images/pokemon_card_corner.png" alt="Corner"></div>
+                <div class="detail-img"><img src="images/pokemon_card_holo.png" alt="Holo Effect"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

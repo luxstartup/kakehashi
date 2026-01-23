@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>経営の方向性確認シート</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .section-row {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title span {
+            background: #eef2f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        /* 選択ボタンのデザイン */
+        .options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .options input[type="radio"] {
+            display: none;
+        }
+
+        .options label {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* 選択時の色分け */
+        /* 現状維持 (青) */
+        .options input[value="keep"]:checked+label {
+            background-color: #e3f2fd;
+            border-color: #2196f3;
+            color: #1565c0;
+        }
+
+        /* 変えたい (オレンジ) */
+        .options input[value="change"]:checked+label {
+            background-color: #fff3e0;
+            border-color: #ff9800;
+            color: #e65100;
+        }
+
+        /* 手放す・減らす (グレー/赤) */
+        .options input[value="drop"]:checked+label {
+            background-color: #ffebee;
+            border-color: #ef5350;
+            color: #c62828;
+        }
+
+        .note-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .btn-area {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button#downloadBtn {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        button#downloadBtn:hover {
+            background-color: #27ae60;
+        }
+
+        @media (max-width: 600px) {
+            .options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>経営の方向性チェックシート</h1>
+        <p style="text-align:center; font-size:14px; color:#666; margin-bottom:30px;">
+            各項目について、現在の率直な意向を選択してください。
+        </p>
+
+        <form id="checkForm">
+            <div class="section-row" data-category="人材・組織">
+                <div class="section-title">人材・組織 <span>Resource (People)</span></div>
+                <div class="options">
+                    <input type="radio" name="human" id="h_keep" value="keep" checked>
+                    <label for="h_keep">現状維持<br><small>今のメンバーで安定</small></label>
+
+                    <input type="radio" name="human" id="h_change" value="change">
+                    <label for="h_change">変えたい・増やしたい<br><small>採用強化・育成・再編</small></label>
+
+                    <input type="radio" name="human" id="h_drop" value="drop">
+                    <label for="h_drop">減らしたい・手放す<br><small>人員整理・外部委託</small></label>
+                </div>
+                <input type="text" class="note-input" placeholder="メモ（例：幹部の育成が急務、など）">
+            </div>
+
+            <div class="section-row" data-category="商品・設備">
+                <div class="section-title">商品・設備・モノ <span>Resource (Goods)</span></div>
+                <div class="options">
+                    <input type="radio" name="goods" id="g_keep" value="keep" checked>
+                    <label for="g_keep">現状維持<br><small>既存商品・設備でいく</small></label>
+
+                    <input type="radio" name="goods" id="g_change" value="change">
+                    <label for="g_change">変えたい・増やしたい<br><small>新商品開発・設備投資</small></label>
+
+                    <input type="radio" name="goods" id="g_drop" value="drop">
+                    <label for="g_drop">減らしたい・手放す<br><small>不採算商品・在庫処分</small></label>
+                </div>
+                <input type="text" class="note-input" placeholder="メモ（例：在庫を圧縮したい、など）">
+            </div>
+
+            <div class="section-row" data-category="経営者の時間">
+                <div class="section-title">経営者の時間 <span>Owner's Time</span></div>
+                <div class="options">
+                    <input type="radio" name="time" id="t_keep" value="keep" checked>
+                    <label for="t_keep">現状維持<br><small>今の働き方でOK</small></label>
+
+                    <input type="radio" name="time" id="t_change" value="change">
+                    <label for="t_change">変えたい（質を変える）<br><small>現場から戦略へシフト</small></label>
+
+                    <input type="radio" name="time" id="t_drop" value="drop">
+                    <label for="t_drop">減らしたい（量を減らす）<br><small>労働時間を短縮したい</small></label>
+                </div>
+                <input type="text" class="note-input" placeholder="メモ（例：週3日は現場を抜けたい、など）">
+            </div>
+
+            <div class="section-row" data-category="売上・規模">
+                <div class="section-title">売上・規模 <span>Sales</span></div>
+                <div class="options">
+                    <input type="radio" name="sales" id="s_keep" value="keep" checked>
+                    <label for="s_keep">現状維持<br><small>無理せず安定重視</small></label>
+
+                    <input type="radio" name="sales" id="s_change" value="change">
+                    <label for="s_change">もっと増やしたい<br><small>シェア拡大・成長路線</small></label>
+
+                    <input type="radio" name="sales" id="s_drop" value="drop">
+                    <label for="s_drop">減っても構わない<br><small>質重視・選別受注</small></label>
+                </div>
+                <input type="text" class="note-input" placeholder="メモ（例：年商10億を目指す、など）">
+            </div>
+
+            <div class="section-row" data-category="利益・キャッシュ">
+                <div class="section-title">利益・キャッシュ <span>Profit</span></div>
+                <div class="options">
+                    <input type="radio" name="profit" id="p_keep" value="keep" checked>
+                    <label for="p_keep">現状維持<br><small>今の利益率で満足</small></label>
+
+                    <input type="radio" name="profit" id="p_change" value="change">
+                    <label for="p_change">改善したい<br><small>利益率・単価アップ</small></label>
+
+                    <input type="radio" name="profit" id="p_drop" value="drop">
+                    <label for="p_drop">一時的に減ってもいい<br><small>先行投資・節税重視</small></label>
+                </div>
+                <input type="text" class="note-input" placeholder="メモ（例：赤字部門を解消したい、など）">
+            </div>
+
+            <div class="btn-area">
+                <button type="button" id="downloadBtn">内容を登録してCSV出力</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const rows = document.querySelectorAll('.section-row');
+            let csvContent = "項目,方向性(ステータス),詳細メモ,回答日時\n"; // CSVヘッダー
+
+            // 日本語表記への変換マップ
+            const statusMap = {
+                'keep': '現状維持 (Keep)',
+                'change': '変えたい/増やしたい (Change)',
+                'drop': '減らしたい/手放す (Drop)'
+            };
+
+            const now = new Date().toLocaleString();
+
+            rows.forEach(row => {
+                const category = row.getAttribute('data-category');
+
+                // 選択されているラジオボタンを探す
+                const checkedRadio = row.querySelector('input[type="radio"]:checked');
+                const statusKey = checkedRadio ? checkedRadio.value : '';
+                const statusText = statusMap[statusKey] || '未選択';
+
+                // メモの内容を取得（カンマが含まれている場合はダブルクォートで囲む）
+                let note = row.querySelector('.note-input').value.trim();
+                note = `"${note.replace(/"/g, '""')}"`; // エスケープ処理
+
+                csvContent += `${category},${statusText},${note},${now}\n`;
+            });
+
+            // BOMを付加してExcelでの文字化けを防ぐ
+            const bom = new Uint8Array([0xEF, 0xBB, 0xBF]);
+            const blob = new Blob([bom, csvContent], { type: 'text/csv;charset=utf-8;' });
+
+            // ダウンロードリンクを作成してクリック
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", `経営方向性確認_${new Date().toISOString().slice(0, 10)}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+
+</body>
+
+</html>

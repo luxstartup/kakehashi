@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Lottery - KAKEHASHI Luxembourg</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #be123c;
+            --gold: #b45309;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-light);
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Lottery Specific Styles */
+        .product-hero {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .hero-img {
+            height: 300px;
+            background: #ddd url('images/hibiki_21.png') center/cover;
+            position: relative;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gold);
+            color: white;
+            padding: 8px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .product-details {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .step {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .step-icon {
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .cta-box {
+            background: #fff7ed;
+            border: 2px solid var(--gold);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .btn-enter {
+            display: block;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-enter:hover {
+            background: var(--accent);
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-flex">
+            <div class="logo">KAKEHASHI <span>Lottery</span></div>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; color: var(--primary);">Limited Raffle Sale</h2>
+
+        <div class="product-hero">
+            <div class="hero-img">
+                <div class="status-badge">Accepting Entries</div>
+            </div>
+            <div class="product-details">
+                <span style="color: #64748b; font-weight: bold;">JAPANESE WHISKY</span>
+                <h1 class="title">Hibiki 21 Years Old - Limited Edition</h1>
+                <div class="price">Price: 850€ <span style="font-size: 1rem; color: #666; font-weight: normal;">(Market
+                        Value: 1200€+)</span></div>
+                <p>Extremely rare bottle. Only 3 bottles available for this month's lottery.</p>
+
+                <div class="flow-steps">
+                    <div class="step">
+                        <div class="step-icon">1</div><br>Log in & Apply
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div><br>Wait for Draw<br><strong>(Feb 20)</strong>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div><br>Winners receive<br>Email
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h3 style="margin: 0 0 10px 0; color: var(--gold);">🔒 Members Only</h3>
+                    <p style="margin: 0;">You need to be a registered member to participate in this lottery.</p>
+                    <a href="#" class="btn-enter">Log in to Enter Raffle</a>
+                </div>
+
+                <p class="disclaimer">
+                    *Winners will be notified via email on Feb 20th, 18:00.<br>
+                    *Payment instructions will be sent to winners only.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

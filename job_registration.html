@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Talent Pool - KAKEHASHI Luxembourg</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --green: #15803d;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-light);
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .registration-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            color: var(--green);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .btn-register {
+            width: 100%;
+            background: var(--green);
+            color: white;
+            padding: 15px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-register:hover {
+            background: #166534;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="font-weight: bold; font-size: 1.2rem;">KAKEHASHI <span>Job Match</span></div>
+        <a href="jobs.html" class="back-link">← Back to Job Listings</a>
+    </header>
+
+    <div class="container">
+        <div class="registration-box">
+            <h1>Join the Talent Pool</h1>
+            <p class="subtitle">Don't search. Be found. We'll notify you when a job matches your profile.</p>
+
+            <form>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Taro Yamada">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="taro@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Preferred Job Type</label>
+                    <select>
+                        <option>Any</option>
+                        <option>Event Staff (1 day)</option>
+                        <option>Restaurant (Kitchen)</option>
+                        <option>Restaurant (Service)</option>
+                        <option>Shop Assistant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Availability</label>
+                    <select>
+                        <option>Weekends Only</option>
+                        <option>Weekdays & Weekends</option>
+                        <option>Flexible</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-register"
+                    onclick="alert('Thank you! You are added to the list.')">Register Free</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

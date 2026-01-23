@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKEHASHI Luxembourg - Unlock Hidden Japan</title>
+    <style>
+        :root {
+            /* Brand Colors */
+            --primary: #0f172a;
+            /* Deep Navy */
+            --accent: #be123c;
+            /* Japan Red */
+            --gold: #b45309;
+            /* Premium Gold */
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Utilities */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-event {
+            background: #e0f2fe;
+            color: #0284c7;
+        }
+
+        /* Free Info */
+        .badge-deal {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        /* Paid Offer */
+        .badge-job {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        /* Job */
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .btn-login {
+            background: var(--accent);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1528360983277-13d9b152c6d1?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .search-bar {
+            background: white;
+            display: inline-flex;
+            padding: 5px;
+            border-radius: 50px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            flex-grow: 1;
+            border-radius: 50px;
+        }
+
+        .search-bar button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .view-all {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Card Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #cbd5e1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .premium-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--primary);
+            color: #fbbf24;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .card-meta {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-info {
+            background: #f1f5f9;
+            color: var(--text-dark);
+        }
+
+        .btn-info:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-buy {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-buy:hover {
+            background: #9f1239;
+        }
+
+        /* Job & Service Banner */
+        .service-banner {
+            background: white;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .newsletter {
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .newsletter h4 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .service-banner {
+                flex-direction: column;
+                text-align: left;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .service-banner .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">KAKEHASHI <span>LUX</span></div>
+            <div class="nav-links">
+                <a href="#">Events</a>
+                <a href="#">Food Guide</a>
+                <a href="#">Shop</a>
+                <a href="#" class="btn-login">Join / Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Unlock the Hidden Japan</h1>
+            <p>Authentic food, exclusive events, and real community.<br>Discover the Japan you can't find on Google.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Try 'Ramen', 'Language Exchange', or 'Sake'...">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">🔥 Trending this Week</h2>
+        </div>
+
+        <div class="grid">
+            <div class="card" style="border: 1px solid var(--gold);">
+                <div class="card-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80');">
+                    <div class="premium-tag">👑 Member Exclusive</div>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-deal">Limited Offer</span>
+                        <h3 class="card-title">Chef's Table: Wagyu Night</h3>
+                        <div class="card-meta">📍 Kamakura (Grund) | 📅 Feb 14</div>
+                        <p class="card-desc">Experience a 7-course authentic Wagyu dinner. Only 5 seats available for
+                            Kakehashi members.</p>
+                    </div>
+                    <a href="#" class="btn btn-buy">Book Now (120€)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Food Guide</span>
+                        <h3 class="card-title">Top 3 Authentic Ramen Spots</h3>
+                        <div class="card-meta">📝 Article | ⏱ 3 min read</div>
+                        <p class="card-desc">Sick of "Asian Fusion" noodles? Here are the only 3 places in Luxembourg
+                            where Japanese people actually eat ramen.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Read Article</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Community</span>
+                        <h3 class="card-title">Japanese Language Exchange</h3>
+                        <div class="card-meta">📍 Golden Bean | 📅 This Friday</div>
+                        <p class="card-desc">Practice your Japanese with native speakers. Free entry, just buy a coffee.
+                            All levels welcome!</p>
+                    </div>
+                    <a href="#" class="btn btn-info">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">📅 Upcoming Events</h2>
+            <a href="#" class="view-all">View Calendar ></a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-body" style="flex-direction: row; align-items: center; gap: 15px;">
+                    <div
+                        style="text-align: center; background: #f1f5f9; padding: 10px; border-radius: 8px; min-width: 60px;">
+                        <div style="font-size: 0.8rem; color: var(--accent); font-weight: bold;">MAR</div>
+                        <div style="font-size: 1.5rem; font-weight: bold;">05</div>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: var(--primary);">Manga Reading Club</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.85rem; color: #64748b;">📍 Bibliothèque nationale</p>
+                    </div>
+                    <a href="#" style="margin-left: auto; color: var(--accent); font-weight: bold;">Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body" style="flex-direction: row; align-items: center; gap: 15px;">
+                    <div
+                        style="text-align: center; background: #f1f5f9; padding: 10px; border-radius: 8px; min-width: 60px;">
+                        <div style="font-size: 0.8rem; color: var(--accent); font-weight: bold;">MAR</div>
+                        <div style="font-size: 1.5rem; font-weight: bold;">12</div>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0; color: var(--primary);">Sake Tasting Workshop</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.85rem; color: #64748b;">📍 House of Japan</p>
+                    </div>
+                    <a href="#" style="margin-left: auto; color: var(--accent); font-weight: bold;">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">💎 Exclusive Offers</h2>
+            <a href="#" class="view-all">Visit Shop ></a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-img"
+                    style="height: 150px; background-image: url('https://images.unsplash.com/photo-1582234289893-662584d43e5c?auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-deal">Food Delivery</span>
+                    <h4 class="card-title">DIY Temaki-Sushi Kit</h4>
+                    <p class="card-desc">Authentic ingredients delivered to your door. Good for 4 people.</p>
+                    <a href="#" class="btn btn-buy">Order (45€)</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"
+                    style="height: 150px; background-image: url('https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-deal">Auction</span>
+                    <h4 class="card-title">Vintage Anime Figures</h4>
+                    <p class="card-desc">Rare collection from the 90s. Currently in Luxembourg. No shipping fee.</p>
+                    <a href="#" class="btn btn-buy">Bid Now (Current: 20€)</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"
+                    style="height: 150px; background-image: url('https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?auto=format&fit=crop&w=800&q=80');">
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-deal">Service</span>
+                    <h4 class="card-title">Private Kimono Dressing</h4>
+                    <p class="card-desc">Professional dressing service for your special photo shoot.</p>
+                    <a href="#" class="btn btn-buy">Book (80€)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-banner">
+            <div>
+                <span class="badge badge-job">Job Match</span>
+                <h3 style="margin: 10px 0 5px; color: var(--primary);">Want to work with Japanese?</h3>
+                <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Find part-time jobs at authentic Japanese
+                    restaurants.</p>
+            </div>
+            <a href="#" class="btn btn-info" style="border: 1px solid #cbd5e1;">Browse Jobs</a>
+        </div>
+
+        <div class="service-banner" style="background-color: #fff7ed; border-left-color: #f97316;">
+            <div>
+                <span class="badge" style="background: #ffedd5; color: #c2410c;">For Travelers</span>
+                <h3 style="margin: 10px 0 5px; color: #9a3412;">Traveling to Luxembourg?</h3>
+                <p style="margin: 0; color: #9a3412; font-size: 0.9rem;">Get our "Japanese Oasis Map" - Find ramen &
+                    late-night spots.</p>
+            </div>
+            <a href="#" class="btn" style="background: #f97316; color: white;">Get Free Map</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="newsletter">
+                <h4>Join the Inner Circle</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 20px;">Get exclusive event invites and secret menu offers
+                    straight to your inbox.</p>
+                <div class="search-bar" style="max-width: 400px; margin: 0 auto;">
+                    <input type="email" placeholder="Your email address">
+                    <button style="background: var(--accent);">Join</button>
+                </div>
+            </div>
+            <p>&copy; 2026 KAKEHASHI Luxembourg. All rights reserved.</p>
+            <div style="margin-top: 10px; font-size: 0.8rem;">
+                <a href="#">About Us</a> | <a href="#">Partner with us</a> | <a href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

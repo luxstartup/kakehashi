@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Job - KAKEHASHI Luxembourg</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #f59e0b;
+            /* Bright Orange */
+            --blue: #3b82f6;
+            /* Bright Blue */
+            --bg-light: #fff7ed;
+            /* Warm Light Background */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg-light);
+            color: #333;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .btn-back {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-img {
+            height: 300px;
+            background-image: url('images/happy_staff.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            padding: 40px 30px 20px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .hero-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #f1f5f9;
+            margin: 10px 0 0;
+        }
+
+        /* Filter / Search */
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .filter-tag {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #64748b;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+
+        .filter-tag.active {
+            background: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
+
+        /* Job Grid */
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #fed7aa;
+            /* Light orange border */
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.15);
+            border-color: var(--accent);
+        }
+
+        .job-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .company-icon {
+            width: 50px;
+            height: 50px;
+            background: #f1f5f9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0 0 5px;
+        }
+
+        .job-company {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: #eff6ff;
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        .tag-urgent {
+            background: #fef2f2;
+            color: #ef4444;
+        }
+
+        .btn-apply {
+            margin-top: auto;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-apply:hover {
+            background: #d97706;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary);
+            color: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">KAKEHASHI <span>Job Match</span></div>
+            <a href="index.html" class="btn-back">← Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="hero">
+            <div class="hero-img">
+                <div class="hero-overlay">
+                    <h1>Start Your Dream Job in Luxembourg</h1>
+                    <p>Connect with top Japanese restaurants and companies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="filter-tag active">All Jobs</div>
+            <div class="filter-tag">Kitchen</div>
+            <div class="filter-tag">Service</div>
+            <div class="filter-tag">Event</div>
+            <div class="filter-tag">Office</div>
+        </div>
+
+        <div class="job-grid">
+            <!-- Job 1 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Ramen Chef / Kitchen Staff</h3>
+                        <div class="job-company">Ramen Tei Luxembourg</div>
+                    </div>
+                    <div class="company-icon">🍜</div>
+                </div>
+                <div class="tags">
+                    <span class="tag tag-urgent">URGENT</span>
+                    <span class="tag">Full Time</span>
+                    <span class="tag">Visa Support</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 20px;">
+                    Join our busy kitchen team. Experience with noodle preparation preferred but not required. Great
+                    team atmosphere.
+                </p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Sushi Server</h3>
+                        <div class="job-company">Kikuoka Country Club</div>
+                    </div>
+                    <div class="company-icon">🍣</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Part Time</span>
+                    <span class="tag">Weekends</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 20px;">
+                    Elegant service staff needed for weekend shifts. English and Japanese required. French is a plus.
+                </p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Barista & Cafe Staff</h3>
+                        <div class="job-company">Matcha Cafe</div>
+                    </div>
+                    <div class="company-icon">🍵</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Full Time</span>
+                    <span class="tag">Training Provided</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 20px;">
+                    Make the best matcha lattes in town! We are looking for a friendly and energetic person to join our
+                    new cafe.
+                </p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Event Coordinator Assistant</h3>
+                        <div class="job-company">Kakehashi Events</div>
+                    </div>
+                    <div class="company-icon">🎉</div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Internship</span>
+                    <span class="tag">Remote OK</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 20px;">
+                    Help us organize Japanese cultural festivals. Great opportunity to learn event management.
+                </p>
+                <a href="#" class="btn-apply">Apply Now</a>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="margin: 0 0 10px;">Don't see a match?</h2>
+            <p style="opacity: 0.9;">Join our Talent Pool and get notified when your dream job opens up.</p>
+            <a href="job_registration.html" class="cta-btn">Register for Talent Pool</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
