@@ -316,6 +316,50 @@
                 font-size: 1.8rem;
             }
         }
+
+        /* Mobile Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 15px 0;
+                margin-left: 0;
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -324,7 +368,12 @@
     <header>
         <div class="container nav-flex">
             <div class="logo">KAKEHASHI <span>LUX</span></div>
-            <div class="nav-links">
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="discover.html">Discover</a>
                 <a href="events.html">Events</a>
                 <a href="lottery.html">Lottery</a>
@@ -413,6 +462,7 @@
         <!-- 2. Cultural Articles -->
         <div class="section-header">
             <h2 class="section-title">🇯🇵 Cultural Articles</h2>
+            <a href="discover.html" class="view-all">View All Articles ></a>
         </div>
 
         <div class="grid">
@@ -616,6 +666,11 @@
             <p>&copy; 2026 KAKEHASHI Luxembourg.</p>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
