@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKEHASHI Luxembourg - Events</title>
+    <style>
+        :root {
+            /* Brand Colors */
+            --primary: #0f172a;
+            /* Deep Navy */
+            --accent: #be123c;
+            /* Japan Red */
+            --gold: #b45309;
+            /* Premium Gold */
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Utilities */
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .badge-event {
+            background: #e0f2fe;
+            color: #0284c7;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .btn-login {
+            background: var(--accent);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1514539079130-25950c84af65?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #cbd5e1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            margin: 5px 0 10px;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .card-meta {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-info {
+            background: #f1f5f9;
+            color: var(--text-dark);
+        }
+
+        .btn-info:hover {
+            background: #e2e8f0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* View Toggle */
+        .view-toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .view-btn {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--text-gray);
+            transition: 0.2s;
+        }
+
+        .view-btn:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+
+        .view-btn:last-child {
+            border-radius: 0 6px 6px 0;
+            border-left: none;
+        }
+
+        .view-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Calendar Styles */
+        .calendar-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            margin-bottom: 60px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .calendar-month {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background: #e2e8f0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .day-header {
+            background: #f8fafc;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .calendar-day {
+            background: white;
+            min-height: 120px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .calendar-day.empty {
+            background: #f9fafb;
+        }
+
+        .day-number {
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .event-marker {
+            display: block;
+            font-size: 0.75rem;
+            padding: 4px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            color: white;
+            text-decoration: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: 0.2s;
+        }
+
+        .event-marker:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .bg-community {
+            background-color: #0ea5e9;
+        }
+
+        .bg-workshop {
+            background-color: #8b5cf6;
+        }
+
+        .bg-art {
+            background-color: #ec4899;
+        }
+
+        .bg-movie {
+            background-color: #f43f5e;
+        }
+
+        .bg-culture {
+            background-color: #10b981;
+        }
+
+        .bg-fashion {
+            background-color: #f59e0b;
+        }
+
+        @media (max-width: 768px) {
+            .calendar-day {
+                min-height: 60px;
+                font-size: 0.7rem;
+            }
+
+            .event-marker {
+                font-size: 0.6rem;
+                padding: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo"><a href="index.html">KAKEHASHI <span>LUX</span></a></div>
+            <div class="nav-links">
+                <a href="discover.html">Discover</a>
+                <a href="events.html" style="color:white;">Events</a>
+                <a href="lottery.html">Lottery</a>
+                <a href="auction.html">Auction</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="#" class="btn-login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Community Events & Workshops</h1>
+            <p>Join the vibrant Kakehashi community in Luxembourg. Learn, share, and connect.</p>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">📅 Upcoming Events</h2>
+            <div class="view-toggle-container">
+                <button class="view-btn active" onclick="switchView('list')">List View</button>
+                <button class="view-btn" onclick="switchView('calendar')">Calendar View</button>
+            </div>
+        </div>
+
+        <div id="listView" class="grid">
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_language.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Community</span>
+                        <h3 class="card-title">Japanese Language Exchange</h3>
+                        <div class="card-meta">📍 Golden Bean | 📅 Fri, Nov 03</div>
+                        <p class="card-desc">Practice Japanese with native speakers. Free entry. All levels welcome!</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Register Free</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_sake.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Workshop</span>
+                        <h3 class="card-title">Sake Tasting Masterclass</h3>
+                        <div class="card-meta">📍 Melia Hotel | 📅 Sat, Nov 04</div>
+                        <p class="card-desc">guided tasting of 5 premium sakes with sommelier explanations.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Book (45€)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_shodo.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Art</span>
+                        <h3 class="card-title">Shodo Calligraphy</h3>
+                        <div class="card-meta">📍 Art Centre | 📅 Sun, Nov 05</div>
+                        <p class="card-desc">Learn the basics of Japanese calligraphy. Materials provided.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Book (20€)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_anime.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Movie</span>
+                        <h3 class="card-title">Anime Movie Night: "Your Name"</h3>
+                        <div class="card-meta">📍 Kinepolis | 📅 Wed, Nov 08</div>
+                        <p class="card-desc">Special screening with original audio and English subtitles.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Tickets (12€)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_matcha.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Culture</span>
+                        <h3 class="card-title">Matcha Tea Ceremony</h3>
+                        <div class="card-meta">📍 Japanese Embassy | 📅 Sat, Nov 11</div>
+                        <p class="card-desc">Experience the tranquility of a traditional tea gathering.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Join Waitlist</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_kimono.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Fashion</span>
+                        <h3 class="card-title">Kimono Dressing Workshop</h3>
+                        <div class="card-meta">📍 Culture Hub | 📅 Sun, Nov 12</div>
+                        <p class="card-desc">Learn how to wear a Yukata/Kimono properly. Rentals available.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Book (30€)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar View -->
+        <div id="calendarView" class="container calendar-container hidden">
+            <div class="calendar-header">
+                <div class="calendar-month">November 2026</div>
+            </div>
+            <div class="calendar-grid">
+                <!-- Headers -->
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+
+                <!-- Days -->
+                <!-- Nov 1st is Sunday -->
+                <!-- Week 1 -->
+                <div class="calendar-day"><span class="day-number">1</span></div>
+                <div class="calendar-day"><span class="day-number">2</span></div>
+                <div class="calendar-day">
+                    <span class="day-number">3</span>
+                    <a href="#" class="event-marker bg-community">🗣 Language Exchange</a>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">4</span>
+                    <a href="#" class="event-marker bg-workshop">🍶 Sake Tasting</a>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">5</span>
+                    <a href="#" class="event-marker bg-art">🖌 Shodo Calligraphy</a>
+                </div>
+                <div class="calendar-day"><span class="day-number">6</span></div>
+                <div class="calendar-day"><span class="day-number">7</span></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day">
+                    <span class="day-number">8</span>
+                    <a href="#" class="event-marker bg-movie">🎬 Anime Night</a>
+                </div>
+                <div class="calendar-day"><span class="day-number">9</span></div>
+                <div class="calendar-day"><span class="day-number">10</span></div>
+                <div class="calendar-day">
+                    <span class="day-number">11</span>
+                    <a href="#" class="event-marker bg-culture">🍵 Tea Ceremony</a>
+                </div>
+                <div class="calendar-day">
+                    <span class="day-number">12</span>
+                    <a href="#" class="event-marker bg-fashion">👘 Kimono Workshop</a>
+                </div>
+                <div class="calendar-day"><span class="day-number">13</span></div>
+                <div class="calendar-day"><span class="day-number">14</span></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><span class="day-number">15</span></div>
+                <div class="calendar-day"><span class="day-number">16</span></div>
+                <div class="calendar-day"><span class="day-number">17</span></div>
+                <div class="calendar-day"><span class="day-number">18</span></div>
+                <div class="calendar-day"><span class="day-number">19</span></div>
+                <div class="calendar-day"><span class="day-number">20</span></div>
+                <div class="calendar-day"><span class="day-number">21</span></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><span class="day-number">22</span></div>
+                <div class="calendar-day"><span class="day-number">23</span></div>
+                <div class="calendar-day"><span class="day-number">24</span></div>
+                <div class="calendar-day"><span class="day-number">25</span></div>
+                <div class="calendar-day"><span class="day-number">26</span></div>
+                <div class="calendar-day"><span class="day-number">27</span></div>
+                <div class="calendar-day"><span class="day-number">28</span></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><span class="day-number">29</span></div>
+                <div class="calendar-day"><span class="day-number">30</span></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 KAKEHASHI Luxembourg.</p>
+        </div>
+    </footer>
+    <script>
+        function switchView(viewName) {
+            const listView = document.getElementById('listView');
+            const calendarView = document.getElementById('calendarView');
+            const btns = document.querySelectorAll('.view-btn');
+
+            if (viewName === 'list') {
+                listView.classList.remove('hidden');
+                calendarView.classList.add('hidden');
+                btns[0].classList.add('active');
+                btns[1].classList.remove('active');
+            } else {
+                listView.classList.add('hidden');
+                calendarView.classList.remove('hidden');
+                btns[0].classList.remove('active');
+                btns[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -325,6 +325,8 @@
         <div class="container nav-flex">
             <div class="logo">KAKEHASHI <span>LUX</span></div>
             <div class="nav-links">
+                <a href="discover.html">Discover</a>
+                <a href="events.html">Events</a>
                 <a href="lottery.html">Lottery</a>
                 <a href="auction.html">Auction</a>
                 <a href="jobs.html">Jobs</a>
@@ -346,11 +348,13 @@
 
     <div class="container">
 
+        <!-- 1. Trending (Highlights) -->
         <div class="section-header">
             <h2 class="section-title">🔥 Trending this Week</h2>
         </div>
 
         <div class="grid">
+            <!-- Hibiki Lottery -->
             <div class="card" style="border: 2px solid var(--gold);">
                 <div class="card-img" style="background-image: url('images/hibiki_21.png');">
                     <div
@@ -372,6 +376,7 @@
                 </div>
             </div>
 
+            <!-- Ramen Article -->
             <div class="card">
                 <div class="card-img"
                     style="background-image: url('https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=800&q=80');">
@@ -388,9 +393,9 @@
                 </div>
             </div>
 
+            <!-- Language Event -->
             <div class="card">
-                <div class="card-img"
-                    style="background-image: url('https://images.unsplash.com/photo-1528642474498-1af0c17fd8c3?auto=format&fit=crop&w=800&q=80');">
+                <div class="card-img" style="background-image: url('images/event_language.png');">
                 </div>
                 <div class="card-body">
                     <div>
@@ -404,8 +409,10 @@
             </div>
         </div>
 
+
+        <!-- 2. Cultural Articles -->
         <div class="section-header">
-            <h2 class="section-title">🇯🇵 Discover Japan</h2>
+            <h2 class="section-title">🇯🇵 Cultural Articles</h2>
         </div>
 
         <div class="grid">
@@ -458,6 +465,59 @@
             </div>
         </div>
 
+
+        <!-- 3. Upcoming Events -->
+        <div class="section-header">
+            <h2 class="section-title">📅 Upcoming Events</h2>
+            <a href="events.html" class="view-all">View All Events ></a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_language.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Community</span>
+                        <h3 class="card-title">Japanese Language Exchange</h3>
+                        <div class="card-meta">📍 Golden Bean | 📅 Fri, Nov 03</div>
+                        <p class="card-desc">Practice Japanese with native speakers. Free entry. All levels welcome!</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Register Free</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_sake.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Workshop</span>
+                        <h3 class="card-title">Sake Tasting Masterclass</h3>
+                        <div class="card-meta">📍 Melia Hotel | 📅 Sat, Nov 04</div>
+                        <p class="card-desc">guided tasting of 5 premium sakes with sommelier explanations.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Book (45€)</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('images/event_shodo.png');">
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span class="badge badge-event">Art</span>
+                        <h3 class="card-title">Shodo Calligraphy</h3>
+                        <div class="card-meta">📍 Art Centre | 📅 Sun, Nov 05</div>
+                        <p class="card-desc">Learn the basics of Japanese calligraphy. Materials provided.</p>
+                    </div>
+                    <a href="#" class="btn btn-info">Book (20€)</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 4. Live Auctions -->
         <div class="section-header">
             <h2 class="section-title">🔨 Live Auctions</h2>
             <a href="auction.html" class="view-all">View All Auctions ></a>
@@ -491,6 +551,36 @@
                     <h3 class="card-title">Private Sushi Class</h3>
                     <div class="card-meta">Current Bid: <strong>80.00 €</strong></div>
                     <a href="auction.html" class="btn btn-buy">Bid Now</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 5. Lottery -->
+        <div class="section-header">
+            <h2 class="section-title">🎰 Limited Lottery</h2>
+            <a href="lottery.html" class="view-all">View Active Lotteries ></a>
+        </div>
+
+        <div class="grid">
+            <div class="card" style="border: 2px solid var(--gold);">
+                <div class="card-img" style="background-image: url('images/hibiki_21.png');">
+                    <div
+                        style="position:absolute; top:10px; right:10px; background:var(--gold); color:white; padding:5px 10px; font-weight:bold; border-radius:4px;">
+                        Lottery Sale</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title" style="font-size: 1.3rem;">Hibiki 21 Years Old - Limited Edition</h3>
+
+                    <div style="margin: 10px 0; display: flex; align-items: center;">
+                        <span class="limit-alert">LIMIT: 3</span>
+                        <span style="color: #666; font-size: 0.9rem;">Applications closing soon</span>
+                    </div>
+
+                    <p class="card-desc">Extremely rare bottle. Available only for Kakehashi members via lottery system.
+                    </p>
+
+                    <a href="lottery.html" class="btn btn-gold">Enter Raffle Now (850€)</a>
                 </div>
             </div>
         </div>
