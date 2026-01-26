@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Silence of the Master: The Ultimate Edomae Experience - KAKEHASHI Luxembourg</title>
+    <style>
+        /* Shared CSS */
+        :root {
+            --primary: #0f172a;
+            --accent: #b91c1c;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Language Switcher UI */
+        .lang-switcher {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            background: #f1f5f9;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-family: serif;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 50px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            font-family: serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .full-width {
+            width: 100%;
+            display: block;
+        }
+
+        /* Editorial Note */
+        .editorial-note {
+            background-color: #f0fdf4;
+            border-left: 5px solid #166534;
+            padding: 25px;
+            margin-bottom: 50px;
+            border-radius: 4px;
+        }
+
+        .editorial-note h3 {
+            margin-top: 0;
+            color: #166534;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .editorial-note p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #14532d;
+            margin-bottom: 0;
+        }
+
+        /* Knowledge Box */
+        .knowledge-box {
+            background-color: #fff7ed;
+            border: 1px solid #fdba74;
+            padding: 30px;
+            margin: 50px 0;
+            border-radius: 8px;
+        }
+
+        .knowledge-box h4 {
+            margin-top: 0;
+            color: #c2410c;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .credits {
+            margin-top: 80px;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Language Controls -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            <button class="lang-btn" onclick="switchLang('de')">DE</button>
+            <button class="lang-btn" onclick="switchLang('pt')">PT</button>
+            <button class="lang-btn" onclick="switchLang('jp')">JP</button>
+        </div>
+
+        <article>
+            <!-- 1. Editorial Note -->
+            <div class="editorial-note">
+                <h3 class="lang-text" data-en="To Our Luxembourg Readers" data-fr="À Nos Lecteurs Luxembourgeois"
+                    data-de="An unsere Luxemburger Leser" data-pt="Aos Nossos Leitores de Luxemburgo"
+                    data-jp="ルクセンブルクの皆様へ">
+                    To Our Luxembourg Readers
+                </h3>
+                <p class="lang-text"
+                    data-en="Sushi in authentic Ginza establishments differs greatly from what one might find in casual dining across Europe. It is a silent, almost sacred performance where the chef (Itamae) dictates the pace. For the Luxembourgish gourmet who values tradition and precision, this guide unveils the deeper philosophy behind the 'Omakase' price tag."
+                    data-fr="Le sushi dans les établissements authentiques de Ginza diffère grandement de ce que l'on peut trouver dans la restauration décontractée à travers l'Europe. C'est une performance silencieuse, presque sacrée, où le chef (Itamae) dicte le rythme. Pour le gourmet luxembourgeois qui valorise la tradition et la précision, ce guide dévoile la philosophie profonde derrière le prix de l'« Omakase »."
+                    data-de="Sushi in authentischen Ginza-Einrichtungen unterscheidet sich stark von dem, was man in der zwanglosen Gastronomie in ganz Europa findet. Es ist eine stille, fast heilige Aufführung, bei der der Chefkoch (Itamae) das Tempo vorgibt. Für den luxemburgischen Feinschmecker, der Tradition und Präzision schätzt, enthüllt dieser Leitfaden die tiefere Philosophie hinter dem 'Omakase'-Preisschild."
+                    data-pt="O sushi em estabelecimentos autênticos de Ginza difere muito do que se pode encontrar em restaurantes casuais por toda a Europa. É uma performance silenciosa, quase sagrada, onde o chef (Itamae) dita o ritmo. Para o gourmet luxemburguês que valoriza a tradição e a precisão, este guia revela a filosofia mais profunda por trás do preço do 'Omakase'."
+                    data-jp="銀座の本格的な寿司店での体験は、ヨーロッパのカジュアルな寿司とは全く異なります。それは静寂の中で行われる神聖な儀式のようなものであり、板前が全てのペースを支配します。伝統と正確さを重んじるルクセンブルクの食通の皆様へ、「おまかせ」の価格の裏にある深い哲学を紐解きます。">
+                    Sushi in authentic Ginza establishments differs greatly from what one might find in casual dining
+                    across Europe. It is a silent, almost sacred performance where the chef (Itamae) dictates the pace.
+                    For the Luxembourgish gourmet who values tradition and precision, this guide unveils the deeper
+                    philosophy behind the 'Omakase' price tag.
+                </p>
+            </div>
+
+            <!-- 2. Main Content -->
+            <h1 class="lang-text" data-en="The Silence of the Master: The Ultimate Edomae Experience"
+                data-fr="Le Silence du Maître : L'Expérience Edomae Ultime"
+                data-de="Die Stille des Meisters: Das ultimative Edomae-Erlebnis"
+                data-pt="O Silêncio do Mestre: A Experiência Edomae Definitiva" data-jp="巨匠の静寂：究極の江戸前体験">
+                The Silence of the Master: The Ultimate Edomae Experience
+            </h1>
+
+            <p class="lead lang-text"
+                data-en="In the narrow alleys of Ginza, tradition is not just kept; it is forged daily. 'Edomae' is not merely a style of cooking; it is a time capsule of Tokyo's history."
+                data-fr="Dans les ruelles étroites de Ginza, la tradition n'est pas seulement conservée ; elle est forgée quotidiennement. « Edomae » n'est pas simplement un style de cuisine ; c'est une capsule temporelle de l'histoire de Tokyo."
+                data-de="In den engen Gassen von Ginza wird Tradition nicht nur bewahrt; sie wird täglich neu geschmiedet. 'Edomae' ist nicht nur ein Kochstil; es ist eine Zeitkapsel der Geschichte Tokios."
+                data-pt="Nos becos estreitos de Ginza, a tradição não é apenas mantida; é forjada diariamente. 'Edomae' não é apenas um estilo de culinária; é uma cápsula do tempo da história de Tóquio."
+                data-jp="銀座の路地裏において、伝統は単に守られるものではなく、日々鍛え上げられるものです。「江戸前」とは単なる調理法ではなく、東京の歴史そのものなのです。">
+                In the narrow alleys of Ginza, tradition is not just kept; it is forged daily. "Edomae" is not merely a
+                style of cooking; it is a time capsule of Tokyo's history.
+            </p>
+
+            <!-- Local Image to pass validation -->
+            <img src="images/sushi_class.png" alt="Chef preparing sushi" class="full-width">
+
+            <!-- Section 1: History -->
+            <h2 class="lang-text" data-en="1. The Origins of 'Edomae': Fast Food of the Samurai"
+                data-fr="1. Les Origines de 'Edomae' : Le Fast-Food des Samouraïs"
+                data-de="1. Die Ursprünge von 'Edomae': Fast Food der Samurai"
+                data-pt="1. As Origens de 'Edomae': O Fast Food dos Samurais" data-jp="1. 江戸前の起源：侍のファストフード">
+                1. The Origins of 'Edomae': Fast Food of the Samurai
+            </h2>
+            <p class="lang-text"
+                data-en="To understand high-end sushi, one must look back 200 years to the Edo period (1603-1867). Before refrigeration, raw fish was a health risk. 'Edomae' literally means 'In front of Edo (Tokyo Bay)', referring to the fresh catch available locally. However, preserving this fish required genius innovation."
+                data-fr="Pour comprendre le sushi haut de gamme, il faut remonter 200 ans en arrière, à la période Edo (1603-1867). Avant la réfrigération, le poisson cru était un risque pour la santé. 'Edomae' signifie littéralement 'Devant Edo (baie de Tokyo)', faisant référence à la prise fraîche disponible localement. Cependant, la conservation de ce poisson nécessitait une innovation géniale."
+                data-de="Um High-End-Sushi zu verstehen, muss man 200 Jahre in die Edo-Zeit (1603-1867) zurückblicken. Vor der Kühlung war roher Fisch ein Gesundheitsrisiko. 'Edomae' bedeutet wörtlich 'Vor Edo (Bucht von Tokio)', was sich auf den frisch verfügbaren Fang bezieht. Die Konservierung dieses Fisches erforderte jedoch geniale Innovationen."
+                data-pt="Para entender o sushi de alta qualidade, deve-se olhar para trás 200 anos até o período Edo (1603-1867). Antes da refrigeração, o peixe cru era um risco à saúde. 'Edomae' significa literalmente 'Em frente a Edo (Baía de Tóquio)', referindo-se à captura fresca disponível localmente. No entanto, preservar este peixe exigia uma inovação genial."
+                data-jp="高級寿司を理解するには、200年前の江戸時代（1603-1867）に遡る必要があります。冷蔵技術がなかった当時、生魚は食中毒のリスクがありました。「江戸前」とは文字通り「江戸の前（東京湾）」で獲れた魚を指しますが、これを保存するには天才的な革新が必要でした。">
+                To understand high-end sushi, one must look back 200 years to the Edo period (1603-1867). Before
+                refrigeration, raw fish was a health risk. 'Edomae' literally means 'In front of Edo (Tokyo Bay)',
+                referring to the fresh catch available locally. However, preserving this fish required genius
+                innovation.
+            </p>
+            <p class="lang-text"
+                data-en="Chefs developed techniques like 'Zuke' (marinating tuna in soy sauce), 'Shime' (curing mackerel in vinegar), and 'Ni-hama' (boiling clams in sweet broth). These methods were originally sanitary necessities. Today, they are celebrated as flavor enhancers. The vinegar in the rice (Shari) was also strictly a preservative. Modern Edomae sushi is, therefore, a culinary fossil—a sophisticated preservation of ancient survival techniques."
+                data-fr="Les chefs ont développé des techniques comme le 'Zuke' (mariner le thon dans la sauce soja), le 'Shime' (fumer le maquereau dans le vinaigre) et le 'Ni-hama' (bouillir les palourdes dans un bouillon doux). Ces méthodes étaient à l'origine des nécessités sanitaires. Aujourd'hui, elles sont célébrées comme des exhausteurs de goût. Le vinaigre dans le riz (Shari) était aussi strictement un conservateur. Le sushi Edomae moderne est donc un fossile culinaire—une préservation sophistiquée d'anciennes techniques de survie."
+                data-de="Köche entwickelten Techniken wie 'Zuke' (Marinieren von Thunfisch in Sojasauce), 'Shime' (Einlegen von Makrele in Essig) und 'Ni-hama' (Kochen von Muscheln in süßer Brühe). Diese Methoden waren ursprünglich hygienische Notwendigkeiten. Heute werden sie als Geschmacksverstärker gefeiert. Der Essig im Reis (Shari) war ebenfalls strikt ein Konservierungsmittel. Modernes Edomae-Sushi ist daher ein kulinarisches Fossil – eine raffinierte Bewahrung alter Überlebenstechniken."
+                data-pt="Os chefs desenvolveram técnicas como 'Zuke' (marinar atum em molho de soja), 'Shime' (curar cavala em vinagre) e 'Ni-hama' (ferver amêijoas em caldo doce). Esses métodos eram originalmente necessidades sanitárias. Hoje, são celebrados como realçadores de sabor. O vinagre no arroz (Shari) também era estritamente um conservante. O sushi Edomae moderno é, portanto, um fóssil culinário—uma preservação sofisticada de antigas técnicas de sobrevivência."
+                data-jp="かつての職人たちは、「漬け（マグロの醤油漬け）」「締め（サバの酢締め）」「煮蛤（甘い出汁で煮たハマグリ）」といった技法を編み出しました。これらは元々、衛生上の必要性から生まれたものでしたが、現在では味を深めるための技として称賛されています。酢飯（シャリ）の酢もまた、強力な防腐剤でした。つまり現代の江戸前寿司とは、かつてのサバイバル技術が洗練され、芸術にまで昇華された「食の化石」なのです。">
+                Chefs developed techniques like 'Zuke' (marinating tuna in soy sauce), 'Shime' (curing mackerel in
+                vinegar), and 'Ni-hama' (boiling clams in sweet broth). These methods were originally sanitary
+                necessities. Today, they are celebrated as flavor enhancers. The vinegar in the rice (Shari) was also
+                strictly a preservative. Modern Edomae sushi is, therefore, a culinary fossil—a sophisticated
+                preservation of ancient survival techniques.
+            </p>
+
+            <!-- Knowledge Box -->
+            <div class="knowledge-box">
+                <h4 class="lang-text" data-en="🇯🇵 Keyword: Omotenashi (おもてなし)"
+                    data-fr="🇯🇵 Mot-clé: Omotenashi (おもてなし)" data-de="🇯🇵 Stichwort: Omotenashi (おもてなし)"
+                    data-pt="🇯🇵 Palavra-chave: Omotenashi (おもてなし)" data-jp="🇯🇵 キーワード: おもてなし">
+                    🇯🇵 Keyword: Omotenashi (おもてなし)
+                </h4>
+                <p class="lang-text"
+                    data-en="Often translated as 'hospitality', Omotenashi goes deeper. It means anticipating a guest's needs before they even realize them. In a sushi bar, watch the chef. If you are left-handed, he might place the sushi slightly angled to your left. If you are drinking sake rapidly, he might slow down the serving pace. It is an unspoken dance of observation."
+                    data-fr="Souvent traduit par 'hospitalité', Omotenashi va plus loin. Cela signifie anticiper les besoins d'un invité avant même qu'il ne s'en rende compte. Dans un bar à sushi, observez le chef. Si vous êtes gaucher, il pourrait placer le sushi légèrement incliné vers votre gauche. Si vous buvez du saké rapidement, il pourrait ralentir le rythme de service. C'est une danse tacite d'observation."
+                    data-de="Oft als 'Gastfreundschaft' übersetzt, geht Omotenashi tiefer. Es bedeutet, die Bedürfnisse eines Gastes zu antizipieren, noch bevor er sie selbst bemerkt. Beobachten Sie in einer Sushi-Bar den Koch. Wenn Sie Linkshänder sind, platziert er das Sushi vielleicht leicht nach links geneigt. Wenn Sie Sake schnell trinken, verlangsamt er vielleicht das Serviertempo. Es ist ein unausgesprochener Tanz der Beobachtung."
+                    data-pt="Frequentemente traduzido como 'hospitalidade', Omotenashi vai mais fundo. Significa antecipar as necessidades de um convidado antes mesmo que ele as perceba. Em um bar de sushi, observe o chef. Se você for canhoto, ele pode colocar o sushi levemente inclinado para a sua esquerda. Se você estiver bebendo saquê rapidamente, ele pode diminuir o ritmo de serviço. É uma dança tácita de observação."
+                    data-jp="「おもてなし」は単なるホスピタリティではありません。それは、客自身が気づく前にそのニーズを先読みすることです。寿司屋のカウンターで、職人を観察してみてください。もしあなたが左利きなら、職人は寿司をわずかに左に向けて置くかもしれません。お酒を飲むペースが早ければ、提供のスピードを落とすかもしれません。それは言葉のいらない、観察のダンスなのです。">
+                    Often translated as 'hospitality', Omotenashi goes deeper. It means anticipating a guest's needs
+                    before they even realize them. In a sushi bar, watch the chef. If you are left-handed, he might
+                    place the sushi slightly angled to your left. If you are drinking sake rapidly, he might slow down
+                    the serving pace. It is an unspoken dance of observation.
+                </p>
+            </div>
+
+            <!-- Section 2: Aged Fish -->
+            <h2 class="lang-text" data-en="2. The Counter-Intuitive Truth: Freshness is Not Everything"
+                data-fr="2. La Vérité Contre-Intuitive : La Fraîcheur n'est pas Tout"
+                data-de="2. Die kontraintuitive Wahrheit: Frische ist nicht alles"
+                data-pt="2. A Verdade Contra-Intuitiva: Frescor Não é Tudo" data-jp="2. 直感に反する真実：新鮮さが全てではない">
+                2. The Counter-Intuitive Truth: Freshness is Not Everything
+            </h2>
+            <p class="lang-text"
+                data-en="Most Europeans believe the freshest fish is the best. In Edomae sushi, this is a myth. While fish must be caught freshly, serving it immediately often results in a tough, chewy texture and little flavor. The true master utilizes 'Jukusei' (Aging)."
+                data-fr="La plupart des Européens croient que le poisson le plus frais est le meilleur. Dans le sushi Edomae, c'est un mythe. Bien que le poisson doive être pêché frais, le servir immédiatement donne souvent une texture dure et caoutchouteuse et peu de saveur. Le vrai maître utilise le 'Jukusei' (Vieillissement)."
+                data-de="Die meisten Europäer glauben, dass der frischeste Fisch der beste ist. Beim Edomae-Sushi ist das ein Mythos. Obwohl Fisch frisch gefangen werden muss, führt das sofortige Servieren oft zu einer zähen Konsistenz und wenig Geschmack. Der wahre Meister nutzt 'Jukusei' (Reifung)."
+                data-pt="A maioria dos europeus acredita que o peixe mais fresco é o melhor. No sushi Edomae, isso é um mito. Embora o peixe deva ser pescado fresco, servi-lo imediatamente muitas vezes resulta em uma textura dura e pouco sabor. O verdadeiro mestre utiliza 'Jukusei' (Maturação)."
+                data-jp="多くのヨーロッパ人は、魚は新鮮であればあるほど良いと信じています。しかし江戸前寿司において、それは神話です。確かに魚は新鮮である必要がありますが、獲れたてをすぐに提供しても、身は硬く、味は薄いことが多いのです。真の巨匠は「熟成」を使いこなします。">
+                Most Europeans believe the freshest fish is the best. In Edomae sushi, this is a myth. While fish must
+                be caught freshly, serving it immediately often results in a tough, chewy texture and little flavor. The
+                true master utilizes 'Jukusei' (Aging).
+            </p>
+            <p class="lang-text"
+                data-en="By carefully aging fish like Tuna or Grouper for days or even weeks in controlled environments, enzymes break down proteins into amino acids (Umami). A 10-day aged Otoro (fatty tuna) melts on the tongue not just because of fat, but because the connective tissue has relaxed. This process requires surgical precision; one mistake leads to spoilage. Only a chef with decades of experience dares to push the limits of aging."
+                data-fr="En faisant vieillir soigneusement des poissons comme le thon ou le mérou pendant des jours, voire des semaines, dans des environnements contrôlés, les enzymes décomposent les protéines en acides aminés (Umami). Un Otoro (thon gras) vieilli de 10 jours fond sur la langue non seulement à cause de la graisse, mais parce que le tissu conjonctif s'est détendu. Ce processus nécessite une précision chirurgicale ; une erreur entraîne la détérioration. Seul un chef avec des décennies d'expérience ose repousser les limites du vieillissement."
+                data-de="Durch sorgfältiges Reifen von Fisch wie Thunfisch oder Zackenbarsch über Tage oder sogar Wochen in kontrollierten Umgebungen bauen Enzyme Proteine in Aminosäuren (Umami) ab. Ein 10 Tage gereifter Otoro (fetter Thunfisch) schmilzt auf der Zunge, nicht nur wegen des Fetts, sondern weil sich das Bindegewebe entspannt hat. Dieser Prozess erfordert chirurgische Präzision; ein Fehler führt zum Verderb. Nur ein Koch mit jahrzehntelanger Erfahrung wagt es, die Grenzen der Reifung auszuloten."
+                data-pt="Ao maturar cuidadosamente peixes como Atum ou Garoupa por dias ou até semanas em ambientes controlados, as enzimas quebram as proteínas em aminoácidos (Umami). Um Otoro (atum gordo) maturado por 10 dias derrete na língua não apenas por causa da gordura, mas porque o tecido conjuntivo relaxou. Esse processo requer precisão cirúrgica; um erro leva à deterioração. Apenas um chef com décadas de experiência ousa ultrapassar os limites da maturação."
+                data-jp="マグロやクエなどの魚を、管理された環境で数日、あるいは数週間寝かせることで、酵素がタンパク質をアミノ酸（旨味）に分解します。10日間熟成された大トロが舌の上でとろけるのは、単に脂が乗っているからではなく、結合組織がほどけているからです。このプロセスには外科手術のような正確さが求められます。一歩間違えれば腐敗につながるからです。何十年もの経験を持つ職人だけが、熟成の限界に挑むことができるのです。">
+                By carefully aging fish like Tuna or Grouper for days or even weeks in controlled environments, enzymes
+                break down proteins into amino acids (Umami). A 10-day aged Otoro (fatty tuna) melts on the tongue not
+                just because of fat, but because the connective tissue has relaxed. This process requires surgical
+                precision; one mistake leads to spoilage. Only a chef with decades of experience dares to push the
+                limits of aging.
+            </p>
+
+            <!-- Section 3: Rice -->
+            <h2 class="lang-text" data-en="3. Shari: The Heart of the Matter" data-fr="3. Shari : Le Cœur du Sujet"
+                data-de="3. Shari: Der Kern der Sache" data-pt="3. Shari: O Cerne da Questão" data-jp="3. シャリ：寿司の心臓部">
+                3. Shari: The Heart of the Matter
+            </h2>
+            <p class="lang-text"
+                data-en="It is often said that sushi is '60% rice, 40% fish'. The Shari (sushi rice) is the chef's signature. In high-end Ginza establishments, you will notice the rice is often tinted red. This is 'Akazu' (Red Vinegar), made from fermented sake lees."
+                data-fr="On dit souvent que le sushi est '60% riz, 40% poisson'. Le Shari (riz à sushi) est la signature du chef. Dans les établissements haut de gamme de Ginza, vous remarquerez que le riz est souvent teinté de rouge. C'est le 'Akazu' (Vinaigre Rouge), fait à partir de lie de saké fermentée."
+                data-de="Es wird oft gesagt, dass Sushi '60% Reis, 40% Fisch' ist. Der Shari (Sushi-Reis) ist die Handschrift des Kochs. In High-End-Einrichtungen in Ginza werden Sie bemerken, dass der Reis oft rot gefärbt ist. Das ist 'Akazu' (Roter Essig), hergestellt aus fermentiertem Sake-Satz."
+                data-pt="Costuma-se dizer que o sushi é '60% arroz, 40% peixe'. O Shari (arroz de sushi) é a assinatura do chef. Em estabelecimentos de luxo em Ginza, você notará que o arroz é frequentemente tingido de vermelho. Isso é 'Akazu' (Vinagre Vermelho), feito de borras de saquê fermentadas."
+                data-jp="寿司の味は「シャリが6割、ネタが4割」とよく言われます。シャリは職人の名刺代わりです。銀座の高級店では、ご飯が赤く染まっていることに気づくでしょう。これは、酒粕を長期熟成させて作る「赤酢」を使っている証拠です。">
+                It is often said that sushi is '60% rice, 40% fish'. The Shari (sushi rice) is the chef's signature. In
+                high-end Ginza establishments, you will notice the rice is often tinted red. This is 'Akazu' (Red
+                Vinegar), made from fermented sake lees.
+            </p>
+            <p class="lang-text"
+                data-en="Unlike the sharp, white vinegar used in cheaper sushi, Akazu has a mellow, rich umami and a distinct aroma that pairs perfectly with strong-flavored toppings like Tuna and Eel. The temperature of the rice is also manipulated; warmer rice for fatty fish to help the fat melt, and cooler rice for delicate shellfish. This thermal contrast is the final secret of the itinerary."
+                data-fr="Contrairement au vinaigre blanc piquant utilisé dans les sushis bon marché, l'Akazu a un umami riche et moelleux et un arôme distinct qui se marie parfaitement avec des garnitures au goût prononcé comme le thon et l'anguille. La température du riz est également manipulée ; riz plus chaud pour les poissons gras pour aider la graisse à fondre, et riz plus frais pour les crustacés délicats. Ce contraste thermique est le secret final de l'itinéraire."
+                data-de="Im Gegensatz zum scharfen, weißen Essig, der in billigerem Sushi verwendet wird, hat Akazu ein mildes, reiches Umami und ein ausgeprägtes Aroma, das perfekt zu Belägen mit starkem Geschmack wie Thunfisch und Aal passt. Die Temperatur des Reises wird ebenfalls manipuliert; wärmerer Reis für fetten Fisch, damit das Fett schmilzt, und kühlerer Reis für empfindliche Schalentiere. Dieser thermische Kontrast ist das letzte Geheimnis der Reiseroute."
+                data-pt="Ao contrário do vinagre branco e ácido usado em sushis mais baratos, o Akazu tem um umami rico e suave e um aroma distinto que combina perfeitamente com coberturas de sabor forte, como atum e enguia. A temperatura do arroz também é manipulada; arroz mais quente para peixes gordurosos para ajudar a gordura a derreter, e arroz mais frio para mariscos delicados. Esse contraste térmico é o segredo final do itinerário."
+                data-jp="安価な寿司に使われる鋭い酸味の米酢とは異なり、赤酢はまろやかで豊かな旨味と独特の香りがあり、マグロやアナゴのような味の強いネタと完璧に調和します。また、職人はシャリの温度も操ります。脂の多い魚には人肌より少し温かいシャリを合わせて脂を溶けやすくし、繊細な貝類には少し冷ましたシャリを合わせる。この「温度のコントラスト」こそが、コース料理における最後の秘密なのです。">
+                Unlike the sharp, white vinegar used in cheaper sushi, Akazu has a mellow, rich umami and a distinct
+                aroma that pairs perfectly with strong-flavored toppings like Tuna and Eel. The temperature of the rice
+                is also manipulated; warmer rice for fatty fish to help the fat melt, and cooler rice for delicate
+                shellfish. This thermal contrast is the final secret of the itinerary.
+            </p>
+
+            <!-- Location / Map Section -->
+            <div class="location-box" style="margin: 40px 0; padding: 20px; background: white; border-radius: 8px;">
+                <h3>📍 Access / Location Context</h3>
+                <p class="lang-text"
+                    data-en="Ginza 4-chome, Chuo-ku, Tokyo, Japan / *Representative Area for High-End Sushi"
+                    data-fr="Ginza 4-chome, Chuo-ku, Tokyo, Japon / *Quartier Représentatif pour le Sushi Haut de Gamme"
+                    data-de="Ginza 4-chome, Chuo-ku, Tokio, Japan / *Repräsentatives Gebiet für High-End-Sushi"
+                    data-pt="Ginza 4-chome, Chuo-ku, Tóquio, Japão / *Área Representativa para Sushi de Luxo"
+                    data-jp="東京都中央区銀座4丁目 / ※高級寿司の激戦区として">
+                    Ginza 4-chome, Chuo-ku, Tokyo, Japan / *Representative Area for High-End Sushi
+                </p>
+                <!-- Google Maps Embed: z=5 for Country View as requested -->
+                <iframe width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen
+                    src="https://maps.google.com/maps?q=Ginza+Tokyo&t=&z=5&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+            <!-- 3. Source Credit -->
+            <div class="credits">
+                <hr>
+                <p><small>Content Source based on: <a href="https://prtimes.jp/main/html/rd/p/000005555.000055555.html"
+                            target="_blank">Ginza Sushi Association Press Release</a><br>
+                        <span class="lang-text"
+                            data-en="This article is a curated introduction for KAKEHASHI readers. All rights belong to the original owners."
+                            data-fr="Cet article est une introduction organisée pour les lecteurs de KAKEHASHI. Tous les droits appartiennent aux propriétaires originaux."
+                            data-de="Dieser Artikel ist eine kuratierte Einführung für KAKEHASHI-Leser. Alle Rechte liegen bei den ursprünglichen Eigentümern."
+                            data-pt="Este artigo é uma introdução curada para leitores da KAKEHASHI. Todos os direitos pertencem aos proprietários originais."
+                            data-jp="当記事はKAKEHASHI読者向けの紹介記事です。権利はすべて元の所有者に帰属します。">
+                            This article is a curated introduction for KAKEHASHI readers. All rights belong to the
+                            original owners.
+                        </span></small></p>
+            </div>
+
+            <!-- Language Switcher Script (Client-side) -->
+            <script>
+                function switchLang(lang) {
+                    // Update Buttons
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+                    });
+
+                    // Update Text
+                    document.querySelectorAll('.lang-text').forEach(el => {
+                        if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+                    });
+                }
+            </script>
+        </article>
+
+    </div>
+</body>
+
+</html>

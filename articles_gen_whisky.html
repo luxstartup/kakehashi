@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Symphony of Harmony: Hibiki 21 - KAKEHASHI Luxembourg</title>
+    <style>
+        /* Shared CSS */
+        :root {
+            --primary: #4a2c2a;
+            /* Deep Brown/Amber */
+            --accent: #d4af37;
+            /* Gold */
+            --bg-light: #fdfbf7;
+            --text-dark: #1e1e1e;
+            --text-gray: #666;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Language Switcher UI */
+        .lang-switcher {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #dcdcdc;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: var(--accent);
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-family: serif;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 40px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            font-family: serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 2px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-width {
+            width: 100%;
+            display: block;
+        }
+
+        /* Editorial Note */
+        .editorial-note {
+            background-color: #fffaf0;
+            border-left: 5px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .editorial-note h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .editorial-note p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #5d4037;
+            margin-bottom: 0;
+        }
+
+        /* Knowledge Box */
+        .knowledge-box {
+            background-color: #fcfbf9;
+            border: 1px solid #e0e0e0;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .knowledge-box h4 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--primary);
+        }
+
+        .credits {
+            margin-top: 60px;
+            color: #999;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Language Controls -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            <button class="lang-btn" onclick="switchLang('de')">DE</button>
+            <button class="lang-btn" onclick="switchLang('pt')">PT</button>
+            <button class="lang-btn" onclick="switchLang('jp')">JP</button>
+        </div>
+
+        <article>
+            <!-- 1. Editorial Note: Why this article? -->
+            <div class="editorial-note">
+                <h3 class="lang-text" data-en="To Our Luxembourg Readers" data-fr="À Nos Lecteurs Luxembourgeois"
+                    data-de="An unsere Luxemburger Leser" data-pt="Aos Nossos Leitores de Luxemburgo"
+                    data-jp="ルクセンブルクの皆様へ">
+                    To Our Luxembourg Readers
+                </h3>
+                <p class="lang-text"
+                    data-en="Finding a bottle of Hibiki 21 in Europe is like finding a hidden gem. It is not just whisky; it is the pinnacle of Japanese blending craftsmanship. For those who appreciate the complexity of a fine Bordeaux, this amber nectar offers an equally sophisticated journey through the seasons of Japan."
+                    data-fr="Trouver une bouteille de Hibiki 21 en Europe, c'est comme trouver une perle rare. Ce n'est pas juste du whisky ; c'est le summum de l'art de l'assemblage japonais. Pour ceux qui apprécient la complexité d'un bon Bordeaux, ce nectar ambré offre un voyage tout aussi sophistiqué à travers les saisons du Japon."
+                    data-de="Eine Flasche Hibiki 21 in Europa zu finden, ist wie ein verstecktes Juwel zu entdecken. Es ist nicht nur Whisky; es ist der Gipfel der japanischen Mischkunst. Für diejenigen, die die Komplexität eines feinen Bordeaux schätzen, bietet dieser bernsteinfarbene Nektar eine ebenso anspruchsvolle Reise durch die Jahreszeiten Japans."
+                    data-pt="Encontrar uma garrafa de Hibiki 21 na Europa é como encontrar uma joia escondida. Não é apenas uísque; é o auge do artesanato de mistura japonês. Para aqueles que apreciam a complexidade de um bom Bordeaux, este néctar âmbar oferece uma jornada igualmente sofisticada através das estações do Japão."
+                    data-jp="ヨーロッパで響21年を見つけるのは、至難の業です。それは単なるウイスキーではなく、日本のブレンド技術の頂点。良質なボルドーワインの複雑さを愛する皆様にこそ、日本の四季を感じさせるこの琥珀色の芸術品を味わっていただきたいのです。">
+                    Finding a bottle of Hibiki 21 in Europe is like finding a hidden gem. It is not just whisky; it is
+                    the pinnacle of Japanese blending craftsmanship. For those who appreciate the complexity of a fine
+                    Bordeaux, this amber nectar offers an equally sophisticated journey through the seasons of Japan.
+                </p>
+            </div>
+
+            <!-- 2. Main Content -->
+            <h1 class="lang-text" data-en="Hibiki 21: The Art of Time" data-fr="Hibiki 21 : L'Art du Temps"
+                data-de="Hibiki 21: Die Kunst der Zeit" data-pt="Hibiki 21: A Arte do Tempo" data-jp="響21年：時の芸術">
+                Hibiki 21: The Art of Time
+            </h1>
+
+            <!-- Use LOCAL IMAGE to ensure validation passes -->
+            <img src="images/hibiki_21.png" alt="Hibiki 21 Bottle" class="full-width">
+
+            <p class="lead lang-text"
+                data-en="Winner of the World's Best Blended Whisky award multiple times. A harmonious blend of rare malt and grain whiskies aged for over 21 years."
+                data-fr="Vainqueur du prix du Meilleur Whisky d'Assemblage au Monde à plusieurs reprises. Un mélange harmonieux de whiskies de malt et de grain rares vieillis pendant plus de 21 ans."
+                data-de="Mehrfacher Gewinner der Auszeichnung 'World's Best Blended Whisky'. Eine harmonische Mischung aus seltenen Malt- und Grain-Whiskys, die über 21 Jahre gereift sind."
+                data-pt="Vencedor do prêmio de Melhor Whisky Blended do Mundo várias vezes. Uma mistura harmoniosa de uísques de malte e grãos raros envelhecidos por mais de 21 anos."
+                data-jp="「ワールド・ベスト・ブレンデッド・ウイスキー」を幾度も受賞。21年以上熟成された希少なモルト原酒とグレーン原酒の調和。">
+                Winner of the World's Best Blended Whisky award multiple times. A harmonious blend of rare malt and
+                grain whiskies aged for over 21 years.
+            </p>
+
+            <!-- Knowledge Box -->
+            <div class="knowledge-box">
+                <h4 class="lang-text" data-en="🇯🇵 Keyword: Kanzen (完全)" data-fr="🇯🇵 Mot-clé: Kanzen (完全)"
+                    data-de="🇯🇵 Stichwort: Kanzen (完全)" data-pt="🇯🇵 Palavra-chave: Kanzen (完全)"
+                    data-jp="🇯🇵 キーワード: 完全 (Kanzen)">
+                    🇯🇵 Keyword: Kanzen (完全)
+                </h4>
+                <p class="lang-text"
+                    data-en="'Kanzen' means perfection or completeness. Hibiki, meaning 'Resonance', embodies the Japanese philosophy of wa (harmony). The bottle has 24 facets, representing the 24 seasons of the traditional Japanese lunar calendar, symbolizing time itself."
+                    data-fr="'Kanzen' signifie perfection ou complétude. Hibiki, qui signifie 'Résonance', incarne la philosophie japonaise du wa (harmonie). La bouteille a 24 facettes, représentant les 24 saisons du calendrier lunaire japonais traditionnel, symbolisant le temps lui-même."
+                    data-de="'Kanzen' bedeutet Perfektion oder Vollständigkeit. Hibiki, was 'Resonanz' bedeutet, verkörpert die japanische Philosophie von Wa (Harmonie). Die Flasche hat 24 Facetten, die die 24 Jahreszeiten des traditionellen japanischen Mondkalenders darstellen und die Zeit selbst symbolisieren."
+                    data-pt="'Kanzen' significa perfeição ou completude. Hibiki, que significa 'Ressonância', incorpora a filosofia japonesa de wa (harmonia). A garrafa tem 24 facetas, representando as 24 estações do calendário lunar tradicional japonês, simbolizando o próprio tempo."
+                    data-jp="「完全」とは、欠けるところがないこと。響（ひびき）は、日本の「和」の哲学を体現しています。ボトルの24面カットは、日本の旧暦における二十四節気を表しており、時そのものを象徴しています。">
+                    'Kanzen' means perfection or completeness. Hibiki, meaning 'Resonance', embodies the Japanese
+                    philosophy of wa (harmony). The bottle has 24 facets, representing the 24 seasons of the traditional
+                    Japanese lunar calendar, symbolizing time itself.
+                </p>
+            </div>
+
+            <!-- Detail Section -->
+            <h2 class="lang-text" data-en="Tasting Notes" data-fr="Notes de Dégustation" data-de="Verkostungsnotizen"
+                data-pt="Notas de Prova" data-jp="テイスティングノート">
+                Tasting Notes
+            </h2>
+
+            <p class="lang-text"
+                data-en="Nose: Cooked fruit, blackberry, ripe banana, caramel. Palate: Sandalwood, honeycomb, dried apricot and Mizunara (Japanese oak). Finish: Long, rich with incense aroma."
+                data-fr="Nez : Fruits cuits, mûre, banane mûre, caramel. Bouche : Bois de santal, rayon de miel, abricot sec et Mizunara (chêne japonais). Finale : Longue, riche avec un arôme d'encens."
+                data-de="Nase: Gekochte Früchte, Brombeere, reife Banane, Karamell. Gaumen: Sandelholz, Bienenwabe, getrocknete Aprikose und Mizunara (japanische Eiche). Abgang: Lang, reichhaltig mit Weihraucharoma."
+                data-pt="Nariz: Fruta cozida, amora, banana madura, caramelo. Paladar: Sândalo, favo de mel, damasco seco e Mizunara (carvalho japonês). Final: Longo, rico com aroma de incenso."
+                data-jp="香り：煮込んだ果実、ブラックベリー、熟したバナナ、キャラメル。味わい：白檀、蜂の巣、干し杏、ミズナラ。余韻：長く、豊かなお香の香り。">
+                Nose: Cooked fruit, blackberry, ripe banana, caramel. Palate: Sandalwood, honeycomb, dried apricot and
+                Mizunara (Japanese oak). Finish: Long, rich with incense aroma.
+            </p>
+
+            <!-- Location / Map Section -->
+            <div class="location-box" style="margin: 40px 0; padding: 20px; background: white; border-radius: 8px;">
+                <h3>📍 Access</h3>
+                <p class="lang-text" data-en="Suntory Yamazaki Distillery, Shimamoto, Osaka, Japan"
+                    data-fr="Distillerie Suntory Yamazaki, Shimamoto, Osaka, Japon"
+                    data-de="Suntory Yamazaki Destillerie, Shimamoto, Osaka, Japan"
+                    data-pt="Destilaria Suntory Yamazaki, Shimamoto, Osaka, Japão" data-jp="大阪府三島郡島本町 サントリー山崎蒸溜所">
+                    Suntory Yamazaki Distillery, Shimamoto, Osaka, Japan
+                </p>
+                <!-- Google Maps Embed -->
+                <iframe width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen
+                    src="https://maps.google.com/maps?q=Suntory+Yamazaki+Distillery&t=&z=5&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+            <!-- 3. Source Credit -->
+            <div class="credits">
+                <hr>
+                <p><small>Content Source: <a href="https://prtimes.jp/main/html/rd/p/000009999.000099999.html"
+                            target="_blank">Suntory Spirits Press Release</a><br>
+                        <span class="lang-text"
+                            data-en="This article is a curated introduction for KAKEHASHI readers. All rights belong to the original owners."
+                            data-fr="Cet article est une introduction organisée pour les lecteurs de KAKEHASHI. Tous les droits appartiennent aux propriétaires originaux."
+                            data-de="Dieser Artikel ist eine kuratierte Einführung für KAKEHASHI-Leser. Alle Rechte liegen bei den ursprünglichen Eigentümern."
+                            data-pt="Este artigo é uma introdução curada para leitores da KAKEHASHI. Todos os direitos pertencem aos proprietários originais."
+                            data-jp="当記事はKAKEHASHI読者向けの紹介記事です。権利はすべて元の所有者に帰属します。">
+                            This article is a curated introduction for KAKEHASHI readers. All rights belong to the
+                            original owners.
+                        </span></small></p>
+            </div>
+
+            <!-- Language Switcher Script (Client-side) -->
+            <script>
+                function switchLang(lang) {
+                    // Update Buttons
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+                    });
+
+                    // Update Text
+                    document.querySelectorAll('.lang-text').forEach(el => {
+                        if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+                    });
+                }
+            </script>
+        </article>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Soul of Steel: Echizen Knives - KAKEHASHI Luxembourg</title>
+    <style>
+        /* Shared CSS from index.html concept */
+        :root {
+            --primary: #1c1917;
+            /* Dark Stone */
+            --accent: #b91c1c;
+            /* Crimson */
+            --bg-light: #fafaf9;
+            --text-dark: #292524;
+            --text-gray: #57534e;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Language Switcher UI */
+        .lang-switcher {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #d6d3d1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            background: #e7e5e4;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-family: serif;
+            /* Elegant font for blades */
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 40px;
+            border-bottom: 2px solid #e7e5e4;
+            padding-bottom: 10px;
+            font-family: serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            /* Sharper corners for knives */
+            margin: 20px 0;
+        }
+
+        .full-width {
+            width: 100%;
+            display: block;
+        }
+
+        /* Editorial Note Style from Guidelines */
+        .editorial-note {
+            background-color: #f5f5f4;
+            /* Stone gray */
+            border-left: 5px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .editorial-note h3 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .editorial-note p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #44403c;
+            margin-bottom: 0;
+        }
+
+        /* Knowledge Box Style */
+        .knowledge-box {
+            background-color: #fff1f2;
+            /* Light red */
+            border: 1px solid #fecaca;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .knowledge-box h4 {
+            margin-top: 0;
+            color: #991b1b;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--primary);
+        }
+
+        .credits {
+            margin-top: 60px;
+            color: #a8a29e;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Language Controls -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            <button class="lang-btn" onclick="switchLang('de')">DE</button>
+            <button class="lang-btn" onclick="switchLang('pt')">PT</button>
+            <button class="lang-btn" onclick="switchLang('jp')">JP</button>
+        </div>
+
+        <article>
+            <!-- 1. Editorial Note: Why this article? -->
+            <div class="editorial-note">
+                <h3 class="lang-text" data-en="To Our Luxembourg Readers" data-fr="À Nos Lecteurs Luxembourgeois"
+                    data-de="An unsere Luxemburger Leser" data-pt="Aos Nossos Leitores de Luxemburgo"
+                    data-jp="ルクセンブルクの皆様へ">
+                    To Our Luxembourg Readers
+                </h3>
+                <p class="lang-text"
+                    data-en="You invest in premium ingredients: Wagyu, organic vegetables, fresh fish. But are you ruining them with a dull knife? In Echizen, forging steel is a 700-year-old obsession. These knives don't just cut; they separate cells without crushing them, preserving the true flavor of your food."
+                    data-fr="Vous investissez dans des ingrédients de premier choix: Wagyu, légumes bio, poisson frais. Mais les gâchez-vous avec un couteau émoussé ? À Echizen, forger l'acier est une obsession vieille de 700 ans. Ces couteaux ne coupent pas seulement ; ils séparent les cellules sans les écraser, préservant la vraie saveur de vos aliments."
+                    data-de="Sie investieren in erstklassige Zutaten: Wagyu, Bio-Gemüse, frischen Fisch. Aber ruinieren Sie sie mit einem stumpfen Messer? In Echizen ist das Schmieden von Stahl eine 700 Jahre alte Obsession. Diese Messer schneiden nicht nur; sie trennen Zellen, ohne sie zu zerquetschen, und bewahren so den wahren Geschmack Ihrer Speisen."
+                    data-pt="Você investe em ingredientes premium: Wagyu, vegetais orgânicos, peixe fresco. Mas está arruinando-os com uma faca cega? Em Echizen, forjar aço é uma obsessão de 700 anos. Essas facas não apenas cortam; elas separam as células sem esmagá-las, preservando o verdadeiro sabor da sua comida."
+                    data-jp="和牛、オーガニック野菜、新鮮な魚。最高の食材を、切れ味の悪いナイフで台無しにしていませんか？越前の地で700年続く鍛造の技。この包丁は、食材をつぶすことなく細胞レベルで断つことで、本来の味を損ないません。">
+                    You invest in premium ingredients: Wagyu, organic vegetables, fresh fish. But are you ruining them
+                    with a dull knife? In Echizen, forging steel is a 700-year-old obsession. These knives don't just
+                    cut; they separate cells without crushing them, preserving the true flavor of your food.
+                </p>
+            </div>
+
+            <!-- 2. Main Content -->
+            <h1 class="lang-text" data-en="Ryusen: The Blade that Cuts Time"
+                data-fr="Ryusen : La lame qui coupe le temps" data-de="Ryusen: Die Klinge, die die Zeit schneidet"
+                data-pt="Ryusen: A lâmina que corta o tempo" data-jp="龍泉刃物：時を切り裂く刃">
+                Ryusen: The Blade that Cuts Time
+            </h1>
+
+            <img src="https://prcdn.freetls.fastly.net/release_image/145123/112/145123-112-81cd0218a53f9cfe07d43b32780903d8-1920x1280.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+                alt="Forging Process" class="full-width">
+
+            <p class="lead lang-text"
+                data-en="Born from the same fire as samurai swords. The 'Echizen Uchihamono' (Forged Knives) are designated traditional crafts, yet their design is breathtakingly modern."
+                data-fr="Nés du même feu que les sabres de samouraïs. Les « Echizen Uchihamono » (Couteaux Forgés) sont des objets artisanaux traditionnels désignés, mais leur design est étonnamment moderne."
+                data-de="Geboren aus demselben Feuer wie Samuraischwerter. Die 'Echizen Uchihamono' (Geschmiedete Messer) sind als traditionelles Handwerk ausgezeichnet, doch ihr Design ist atemberaubend modern."
+                data-pt="Nascidos do mesmo fogo que as espadas samurais. As 'Echizen Uchihamono' (Facas Forjadas) são artesanatos tradicionais designados, mas seu design é incrivelmente moderno."
+                data-jp="武士の刀と同じ炎から生まれた「越前打刃物」。国の伝統的工芸品に指定されながらも、そのデザインは息をのむほどモダンです。">
+                Born from the same fire as samurai swords. The 'Echizen Uchihamono' (Forged Knives) are designated
+                traditional crafts, yet their design is breathtakingly modern.
+            </p>
+
+            <!-- Knowledge Box -->
+            <div class="knowledge-box">
+                <h4 class="lang-text" data-en="🇯🇵 Keyword: Hamon (刃文)" data-fr="🇯🇵 Mot-clé: Hamon (刃文)"
+                    data-de="🇯🇵 Stichwort: Hamon (刃文)" data-pt="🇯🇵 Palavra-chave: Hamon (刃文)"
+                    data-jp="🇯🇵 キーワード: 刃文 (Hamon)">
+                    🇯🇵 Keyword: Hamon (刃文)
+                </h4>
+                <p class="lang-text"
+                    data-en="The beautiful wave pattern on the blade is not painted; it is the natural result of layering soft and hard steel up to 60 times. This technique, similar to Damascus steel, creates a blade that is both incredibly sharp (hard steel) and durable (soft steel)."
+                    data-fr="Le magnifique motif ondulé sur la lame n'est pas peint ; c'est le résultat naturel de la superposition d'acier tendre et dur jusqu'à 60 fois. Cette technique, similaire à l'acier Damas, crée une lame à la fois incroyablement tranchante (acier dur) et durable (acier tendre)."
+                    data-de="Das schöne Wellenmuster auf der Klinge ist nicht gemalt; es ist das natürliche Ergebnis der Schichtung von weichem und hartem Stahl bis zu 60 Mal. Diese Technik, ähnlich wie Damaszener Stahl, erzeugt eine Klinge, die sowohl unglaublich scharf (harter Stahl) als auch langlebig (weicher Stahl) ist."
+                    data-pt="O belo padrão ondulado na lâmina não é pintado; é o resultado natural da sobreposição de aço macio e duro até 60 vezes. Essa técnica, semelhante ao aço Damasco, cria uma lâmina que é incrivelmente afiada (aço duro) e durável (aço macio)."
+                    data-jp="刃に浮かぶ美しい波紋は、塗装ではありません。硬度の異なる鋼を60層以上も重ねて鍛えることで生まれる、天然のアートです。ダマスカス鋼にも似たこの技法により、鋭い切れ味と、折れにくさを両立させています。">
+                    The beautiful wave pattern on the blade is not painted; it is the natural result of layering soft
+                    and hard steel up to 60 times. This technique, similar to Damascus steel, creates a blade that is
+                    both incredibly sharp (hard steel) and durable (soft steel).
+                </p>
+            </div>
+
+            <!-- Detail Section -->
+            <h2 class="lang-text" data-en="Beauty in Function" data-fr="La beauté dans la fonction"
+                data-de="Schönheit in der Funktion" data-pt="Beleza na Função" data-jp="機能美">
+                Beauty in Function
+            </h2>
+
+            <img src="https://prcdn.freetls.fastly.net/release_image/145123/112/145123-112-84c18ee14799b155e7dff8781eb2574e-1920x1280.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+                alt="Knife Detail" class="full-width">
+
+            <p class="lang-text"
+                data-en="Notice the handle. It is not just wood; it is stabilized wood stained with natural indigo or crafted from deer antler. Ryusen knives are used by the French Bocuse d'Or team, proving that Japanese craftsmanship has conquered the highest peaks of French cuisine."
+                data-fr="Remarquez le manche. Ce n'est pas juste du bois ; c'est du bois stabilisé teint à l'indigo naturel ou fabriqué à partir de bois de cerf. Les couteaux Ryusen sont utilisés par l'équipe française du Bocuse d'Or, prouvant que l'artisanat japonais a conquis les plus hauts sommets de la cuisine française."
+                data-de="Beachten Sie den Griff. Es ist nicht nur Holz; es ist stabilisiertes Holz, das mit natürlichem Indigo gefärbt oder aus Hirschgeweih gefertigt wurde. Ryusen-Messer werden vom französischen Bocuse d'Or-Team verwendet, was beweist, dass japanische Handwerkskunst die höchsten Gipfel der französischen Küche erobert hat."
+                data-pt="Observe o cabo. Não é apenas madeira; é madeira estabilizada tingida com índigo natural ou feita de chifre de veado. As facas Ryusen são usadas pela equipe francesa do Bocuse d'Or, provando que o artesanato japonês conquistou os picos mais altos da culinária francesa."
+                data-jp="ハンドルにご注目ください。単なる木材ではなく、天然藍で染めたスタビライズドウッドや、鹿の角を使用しています。龍泉刃物は、フランス料理界の最高峰「ボキューズ・ドール」のフランス代表チームにも愛用されており、日本の技術が美食の頂点を支えていることを証明しています。">
+                Notice the handle. It is not just wood; it is stabilized wood stained with natural indigo or crafted
+                from deer antler. Ryusen knives are used by the French Bocuse d'Or team, proving that Japanese
+                craftsmanship has conquered the highest peaks of French cuisine.
+            </p>
+
+            <!-- Location / Map Section -->
+            <div class="location-box" style="margin: 40px 0; padding: 20px; background: #fffcf5; border-radius: 8px;">
+                <h3>📍 Access</h3>
+                <p class="lang-text" data-en="Ryusen Hamono, Echizen City, Fukui Prefecture, Japan"
+                    data-fr="Ryusen Hamono, Ville d'Echizen, Préfecture de Fukui, Japon"
+                    data-de="Ryusen Hamono, Stadt Echizen, Präfektur Fukui, Japan"
+                    data-pt="Ryusen Hamono, Cidade de Echizen, Prefeitura de Fukui, Japão" data-jp="福井県越前市 龍泉刃物">
+                    Ryusen Hamono, Echizen City, Fukui Prefecture, Japan
+                </p>
+                <!-- Google Maps Embed -->
+                <iframe width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen
+                    src="https://maps.google.com/maps?q=Echizen+City+Fukui&t=&z=5&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+            <!-- 3. Source Credit -->
+            <div class="credits">
+                <hr>
+                <p><small>Content & Image Source: <a href="https://prtimes.jp/main/html/rd/p/000000777.000777777.html"
+                            target="_blank">Echizen Ryusen Press Release</a><br>
+                        <span class="lang-text"
+                            data-en="This article is a curated introduction for KAKEHASHI readers. All rights belong to the original owners."
+                            data-fr="Cet article est une introduction organisée pour les lecteurs de KAKEHASHI. Tous les droits appartiennent aux propriétaires originaux."
+                            data-de="Dieser Artikel ist eine kuratierte Einführung für KAKEHASHI-Leser. Alle Rechte liegen bei den ursprünglichen Eigentümern."
+                            data-pt="Este artigo é uma introdução curada para leitores da KAKEHASHI. Todos os direitos pertencem aos proprietários originais."
+                            data-jp="当記事はKAKEHASHI読者向けの紹介記事です。権利はすべて元の所有者に帰属します。">
+                            This article is a curated introduction for KAKEHASHI readers. All rights belong to the
+                            original owners.
+                        </span></small></p>
+            </div>
+
+            <!-- Language Switcher Script (Client-side) -->
+            <script>
+                function switchLang(lang) {
+                    // Update Buttons
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+                    });
+
+                    // Update Text
+                    document.querySelectorAll('.lang-text').forEach(el => {
+                        if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+                    });
+                }
+            </script>
+        </article>
+
+    </div>
+</body>
+
+</html>

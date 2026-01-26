@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozen Time: The Snowy Solitude of KAI Tsugaru - KAKEHASHI Luxembourg</title>
+    <!-- JSON-LD SEO Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Frozen Time: The Snowy Solitude of KAI Tsugaru",
+      "image": [
+        "images/ryokan_snow.png"
+      ],
+      "datePublished": "2026-01-24T09:00:00+09:00",
+      "author": [{
+          "@type": "Organization",
+          "name": "KAKEHASHI Luxembourg",
+          "url": "https://kakehashi.lu"
+        }],
+      "description": "Experience the Seven Snows of Tsugaru at Hoshino Resorts KAI. A winter journey of Onsen, Tuna, and Shamisen.",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "KAI Tsugaru",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Owani Onsen",
+          "addressRegion": "Aomori",
+          "addressCountry": "JP"
+        }
+      }
+    }
+    </script>
+    <style>
+        /* Shared CSS */
+        :root {
+            --primary: #1e3a8a;
+            /* Deep Winter Blue */
+            --accent: #ef4444;
+            /* Lacquer Red */
+            --bg-light: #f0f9ff;
+            /* Snow White/Blue tint */
+            --text-dark: #0f172a;
+            --text-gray: #475569;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Language Switcher UI */
+        .lang-switcher {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            background: #f1f5f9;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-family: serif;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 50px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+            font-family: serif;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .full-width {
+            width: 100%;
+            display: block;
+        }
+
+        /* Editorial Note */
+        .editorial-note {
+            background-color: #eff6ff;
+            border-left: 5px solid var(--primary);
+            padding: 25px;
+            margin-bottom: 50px;
+            border-radius: 4px;
+        }
+
+        .editorial-note h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .editorial-note p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #1e3a8a;
+            margin-bottom: 0;
+        }
+
+        /* Knowledge Box */
+        .knowledge-box {
+            background-color: #fff1f2;
+            /* Light Red for Tsugaru Lacquer contrast */
+            border: 1px solid #fda4af;
+            padding: 30px;
+            margin: 50px 0;
+            border-radius: 8px;
+        }
+
+        .knowledge-box h4 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .credits {
+            margin-top: 80px;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Language Controls -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            <button class="lang-btn" onclick="switchLang('de')">DE</button>
+            <button class="lang-btn" onclick="switchLang('pt')">PT</button>
+            <button class="lang-btn" onclick="switchLang('jp')">JP</button>
+        </div>
+
+        <!-- Table of Contents -->
+        <nav style="background: #f1f5f9; padding: 15px; border-radius: 8px; margin-bottom: 30px;">
+            <h4 style="margin-top: 0; color: var(--text-gray);">Contents</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><a href="#section1">1. The Sound of Snow</a></li>
+                <li><a href="#section2">2. Oma Tuna Kaiseki</a></li>
+                <li><a href="#section3">3. Tsugaru Lacquerware</a></li>
+                <li><a href="#access">Access & Map</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <!-- 1. Editorial Note -->
+            <div class="editorial-note">
+                <h3 class="lang-text" data-en="To Our Luxembourg Readers" data-fr="À Nos Lecteurs Luxembourgeois"
+                    data-de="An unsere Luxemburger Leser" data-pt="Aos Nossos Leitores de Luxemburgo"
+                    data-jp="ルクセンブルクの皆様へ">
+                    To Our Luxembourg Readers
+                </h3>
+                <p class="lang-text"
+                    data-en="Aomori is not Tokyo. It is the northern frontier, a land of deep snow and deeper resilience. For the European traveler who has seen the neon lights of Shinjuku and the temples of Kyoto, 'KAI Tsugaru' offers something rarer: total, white silence."
+                    data-fr="Aomori n'est pas Tokyo. C'est la frontière nord, une terre de neige profonde et de résilience encore plus profonde. Pour le voyageur européen qui a vu les néons de Shinjuku et les temples de Kyoto, 'KAI Tsugaru' offre quelque chose de plus rare : un silence blanc total."
+                    data-de="Aomori ist nicht Tokio. Es ist die nördliche Grenze, ein Land mit tiefem Schnee und noch tieferer Widerstandskraft. Für den europäischen Reisenden, der die Neonlichter von Shinjuku und die Tempel von Kyoto gesehen hat, bietet 'KAI Tsugaru' etwas selteneres: totale, weiße Stille."
+                    data-pt="Aomori não é Tóquio. É a fronteira norte, uma terra de neve profunda e resiliência ainda mais profunda. Para o viajante europeu que já viu as luzes de neon de Shinjuku e os templos de Quioto, 'KAI Tsugaru' oferece algo mais raro: silêncio branco total."
+                    data-jp="青森は、東京とは違います。ここは北の最果て、深い雪と、それ以上に深い忍耐の土地です。新宿のネオンや京都の寺院を知るヨーロッパの旅行者にとって、「界 津軽」はより希少な体験を提供します。それは、完全なる白銀の静寂です。">
+                    Aomori is not Tokyo. It is the northern frontier, a land of deep snow and deeper resilience. For the
+                    European traveler who has seen the neon lights of Shinjuku and the temples of Kyoto, 'KAI Tsugaru'
+                    offers something rarer: total, white silence.
+                </p>
+            </div>
+
+            <!-- 2. Main Content -->
+            <h1 class="lang-text" data-en="Frozen Time: The Snowy Solitude of KAI Tsugaru"
+                data-fr="Le Temps Gelé : La Solitude Enneigée de KAI Tsugaru"
+                data-de="Gefrorene Zeit: Die verschneite Einsamkeit von KAI Tsugaru"
+                data-pt="Tempo Congelado: A Solidão Nevada de KAI Tsugaru" data-jp="凍てつく時間：界 津軽の雪の静寂">
+                Frozen Time: The Snowy Solitude of KAI Tsugaru
+            </h1>
+
+            <p class="lead lang-text"
+                data-en="Immerse yourself in 'Kamakura' (snow huts) and ancient hot springs. A luxury ryokan where winter is not endured, but celebrated."
+                data-fr="Plongez-vous dans les 'Kamakura' (igloos de neige) et les sources chaudes anciennes. Un ryokan de luxe où l'hiver n'est pas subi, mais célébré."
+                data-de="Tauchen Sie ein in 'Kamakura' (Schneehütten) und alte heiße Quellen. Ein Luxus-Ryokan, in dem der Winter nicht ertragen, sondern gefeiert wird."
+                data-pt="Mergulhe em 'Kamakura' (cabanas de neve) e fontes termais antigas. Um ryokan de luxo onde o inverno não é suportado, mas celebrado."
+                data-jp="「かまくら」と古湯に身を委ねる。冬を耐えるのではなく、祝福するためのラグジュアリー旅館。">
+                Immerse yourself in 'Kamakura' (snow huts) and ancient hot springs. A luxury ryokan where winter is not
+                endured, but celebrated.
+            </p>
+
+            <!-- Local Image Placeholder (User Expected to Provide) -->
+            <img src="https://prtimes.jp/data/corp/33064/cover/pc-32bc3aa23ebb731e321a7fafc6fe3dd0-eeeab91a10c17a71276520fc9c2ec9af.jpeg?auto=avif"
+                alt="Hoshino Resorts Brand Image (Placeholder)" class="full-width">
+
+            <!-- Section 1: Snow -->
+            <h2 id="section1" class="lang-text" data-en="1. The Sound of Snow: Tsugaru Shamisen"
+                data-fr="1. Le Son de la Neige : Tsugaru Shamisen" data-de="1. Der Klang des Schnees: Tsugaru Shamisen"
+                data-pt="1. O Som da Neve: Tsugaru Shamisen" data-jp="1. 雪の音：津軽三味線">
+                1. The Sound of Snow: Tsugaru Shamisen
+            </h2>
+            <p class="lang-text"
+                data-en="The snow in Tsugaru is different. It is heavy, wet, and relentless. To silence the howling wind, the locals developed the 'Tsugaru Shamisen'. Unlike the delicate plucking seen in Kyoto geisha districts, the Tsugaru style is percussive, aggressive, and soulful. It is the jazz of the north."
+                data-fr="La neige à Tsugaru est différente. Elle est lourde, humide et implacable. Pour faire taire le vent hurlant, les habitants ont développé le 'Tsugaru Shamisen'. Contrairement au pincement délicat vu dans les quartiers de geishas de Kyoto, le style Tsugaru est percussif, agressif et plein d'âme. C'est le jazz du nord."
+                data-de="Der Schnee in Tsugaru ist anders. Er ist schwer, nass und unerbittlich. Um den heulenden Wind zum Schweigen zu bringen, entwickelten die Einheimischen die 'Tsugaru Shamisen'. Im Gegensatz zum zarten Zupfen in den Geisha-Vierteln von Kyoto ist der Tsugaru-Stil perkussiv, aggressiv und gefühlvoll. Es ist der Jazz des Nordens."
+                data-pt="A neve em Tsugaru é diferente. É pesada, úmida e implacável. Para silenciar o vento uivante, os habitantes locais desenvolveram o 'Tsugaru Shamisen'. Ao contrário do dedilhado delicado visto nos distritos de gueixas de Quioto, o estilo Tsugaru é percussivo, agressivo e cheio de alma. É o jazz do norte."
+                data-jp="津軽の雪は違います。重く、湿り気を帯び、容赦なく降り積もります。吹き荒れる風をかき消すために、人々は「津軽三味線」を生み出しました。京都の芸舞妓による繊細な演奏とは異なり、津軽のスタイルは打楽器のように激しく、情熱的です。それはまさに、北国のジャズなのです。">
+                The snow in Tsugaru is different. It is heavy, wet, and relentless. To silence the howling wind, the
+                locals developed the 'Tsugaru Shamisen'. Unlike the delicate plucking seen in Kyoto geisha districts,
+                the Tsugaru style is percussive, aggressive, and soulful. It is the jazz of the north.
+            </p>
+            <p class="lang-text"
+                data-en="Every evening, KAI Tsugaru hosts a live performance in a hall decorated with 'Buna' (Japanese Beech) wood art. Guests sit captivated as the three strings mimic the blizzard outside. It is a powerful reminder that beauty often comes from hardship."
+                data-fr="Chaque soir, KAI Tsugaru accueille un spectacle vivant dans une salle décorée d'art en bois de 'Buna' (hêtre japonais). Les invités sont captivés alors que les trois cordes imitent le blizzard à l'extérieur. C'est un rappel puissant que la beauté naît souvent de l'épreuve."
+                data-de="Jeden Abend veranstaltet KAI Tsugaru eine Live-Aufführung in einem Saal, der mit Kunst aus 'Buna' (japanische Buche) dekoriert ist. Die Gäste sitzen gefesselt da, während die drei Saiten den Schneesturm draußen nachahmen. Es ist eine kraftvolle Erinnerung daran, dass Schönheit oft aus Not entsteht."
+                data-pt="Todas as noites, o KAI Tsugaru oferece uma apresentação ao vivo em um salão decorado com arte em madeira 'Buna' (faia japonesa). Os hóspedes ficam cativados enquanto as três cordas imitam a nevasca lá fora. É um lembrete poderoso de que a beleza muitas vezes vem da dificuldade."
+                data-jp="毎晩、界 津軽では「ブナ」のアートで装飾されたロビーで生演奏が行われます。三本の弦が外の猛吹雪を模倣する音色に、ゲストは心を奪われます。美しさはしばしば困難から生まれることを、力強く教えてくれるのです。">
+                Every evening, KAI Tsugaru hosts a live performance in a hall decorated with 'Buna' (Japanese Beech)
+                wood art. Guests sit captivated as the three strings mimic the blizzard outside. It is a powerful
+                reminder that beauty often comes from hardship.
+            </p>
+
+            <!-- Knowledge Box -->
+            <div class="knowledge-box">
+                <h4 class="lang-text" data-en="🇯🇵 Keyword: Yukimi-Buro (雪見風呂)"
+                    data-fr="🇯🇵 Mot-clé: Yukimi-Buro (雪見風呂)" data-de="🇯🇵 Stichwort: Yukimi-Buro (雪見風呂)"
+                    data-pt="🇯🇵 Palavra-chave: Yukimi-Buro (雪見風呂)" data-jp="🇯🇵 キーワード: 雪見風呂">
+                    🇯🇵 Keyword: Yukimi-Buro (雪見風呂)
+                </h4>
+                <p class="lang-text"
+                    data-en="Literally 'Snow-Viewing Bath'. It captures the quintessential Japanese contrast: the biting cold air on your face versus the volcanic heat of the water wrapping your body. Floating a sake cup in the water while watching snowflakes dissolve into the steam is considered the ultimate winter luxury."
+                    data-fr="Littéralement 'Bain en regardant la neige'. Il capture le contraste japonais par excellence : l'air froid piquant sur votre visage contre la chaleur volcanique de l'eau enveloppant votre corps. Faire flotter une coupe de saké dans l'eau tout en regardant les flocons de neige se dissoudre dans la vapeur est considéré comme le luxe hivernal ultime."
+                    data-de="Wörtlich 'Schneeschau-Bad'. Es fängt den typisch japanischen Kontrast ein: die beißend kalte Luft im Gesicht gegen die vulkanische Hitze des Wassers, das Ihren Körper umhüllt. Einen Sake-Becher im Wasser schwimmen zu lassen, während man beobachtet, wie Schneeflocken im Dampf schmelzen, gilt als der ultimative Winterluxus."
+                    data-pt="Literalmente 'Banho Vendo a Neve'. Captura o contraste japonês quintessencial: o ar frio e cortante no rosto versus o calor vulcânico da água envolvendo o corpo. Flutuar um copo de saquê na água enquanto observa os flocos de neve se dissolverem no vapor é considerado o luxo supremo do inverno."
+                    data-jp="文字通り「雪を見ながら入る風呂」。顔に当たる刺すような冷気と、体を包み込む火山性の熱湯。このコントラストこそが日本の冬の醍醐味です。湯船に日本酒を浮かべ、湯気の中で消えゆく雪片を眺めることこそ、究極の贅沢とされています。">
+                    Literally "Snow-Viewing Bath". It captures the quintessential Japanese contrast: the biting cold air
+                    on your face versus the volcanic heat of the water wrapping your body. Floating a sake cup in the
+                    water while watching snowflakes dissolve into the steam is considered the ultimate winter luxury.
+                </p>
+            </div>
+
+            <!-- Image 2: Food -->
+            <img src="https://prtimes.jp/data/corp/33064/cover/pc-32bc3aa23ebb731e321a7fafc6fe3dd0-eeeab91a10c17a71276520fc9c2ec9af.jpeg?auto=avif"
+                alt="Hoshino Resorts Brand Image (Placeholder)" class="full-width">
+
+            <!-- Section 2: Tuna -->
+            <h2 id="section2" class="lang-text" data-en="2. Oma Tuna: The Black Diamond"
+                data-fr="2. Le Thon d'Oma : Le Diamant Noir" data-de="2. Oma-Thunfisch: Der Schwarze Diamant"
+                data-pt="2. Atum de Oma: O Diamante Negro" data-jp="2. 大間のマグロ：黒いダイヤモンド">
+                2. Oma Tuna: The Black Diamond
+            </h2>
+            <p class="lang-text"
+                data-en="Just north of Tsugaru lays the Tsugaru Strait, separating the main island from Hokkaido. In these treacherous currents swims the 'Oma Tuna', known as the Black Diamond of the sea. During winter, these fish build up incredible layers of fat to survive the cold."
+                data-fr="Juste au nord de Tsugaru se trouve le détroit de Tsugaru, séparant l'île principale de Hokkaido. Dans ces courants traîtres nage le 'Thon d'Oma', connu sous le nom de Diamant Noir de la mer. En hiver, ces poissons accumulent des couches incroyables de graisse pour survivre au froid."
+                data-de="Direkt nördlich von Tsugaru liegt die Tsugaru-Straße, die die Hauptinsel von Hokkaido trennt. In diesen tückischen Strömungen schwimmt der 'Oma-Thunfisch', bekannt als der Schwarze Diamant des Meeres. Im Winter bauen diese Fische unglaubliche Fettschichten auf, um die Kälte zu überleben."
+                data-pt="Logo ao norte de Tsugaru fica o Estreito de Tsugaru, separando a ilha principal de Hokkaido. Nessas correntes traiçoeiras nada o 'Atum de Oma', conhecido como o Diamante Negro do mar. Durante o inverno, esses peixes acumulam incríveis camadas de gordura para sobreviver ao frio."
+                data-jp="津軽の北には、本州と北海道を隔てる津軽海峡があります。この荒々しい海流の中を泳ぐのが、海の黒いダイヤと呼ばれる「大間のマグロ」です。冬の間、極寒に耐えるために驚くほどの脂を蓄えます。">
+                Just north of Tsugaru lays the Tsugaru Strait, separating the main island from Hokkaido. In these
+                treacherous currents swims the 'Oma Tuna', known as the Black Diamond of the sea. During winter, these
+                fish build up incredible layers of fat to survive the cold.
+            </p>
+            <p class="lang-text"
+                data-en="At KAI Tsugaru, the Kaiseki dinner features this tuna in a tasting course called 'Maguro Zukushi'. You will experience different cuts—Akami (lean), Chutoro (medium fatty), and Otoro (fatty)—prepared in ways that highlight their distinct textures. It is kilometer-zero dining at its most exclusive."
+                data-fr="À KAI Tsugaru, le dîner Kaiseki met en vedette ce thon dans un menu dégustation appelé 'Maguro Zukushi'. Vous découvrirez différentes coupes—Akami (maigre), Chutoro (mi-gras) et Otoro (gras)—préparées de manière à mettre en valeur leurs textures distinctes. C'est une cuisine kilomètre zéro dans sa forme la plus exclusive."
+                data-de="Im KAI Tsugaru präsentiert das Kaiseki-Abendessen diesen Thunfisch in einem Verkostungsmenü namens 'Maguro Zukushi'. Sie werden verschiedene Schnitte erleben – Akami (mager), Chutoro (mittelfett) und Otoro (fett) –, die so zubereitet sind, dass ihre unterschiedlichen Texturen hervorgehoben werden. Das ist Kilometer-Null-Essen in seiner exklusivsten Form."
+                data-pt="No KAI Tsugaru, o jantar Kaiseki apresenta este atum em um menu de degustação chamado 'Maguro Zukushi'. Você experimentará diferentes cortes—Akami (magro), Chutoro (médio gordo) e Otoro (gordo)—preparados de maneiras que destacam suas texturas distintas. O jantar de quilômetro zero em sua forma mais exclusiva."
+                data-jp="界 津軽の会席料理では、このマグロを「マグロづくし」のコースで堪能できます。赤身、中トロ、大トロといった異なる部位を、それぞれの食感を際立たせる調理法で味わうことができます。これこそ、最も贅沢な「地産地消」です。">
+                At KAI Tsugaru, the Kaiseki dinner features this tuna in a tasting course called 'Maguro Zukushi'. You
+                will experience different cuts—Akami (lean), Chutoro (medium fatty), and Otoro (fatty)—prepared in ways
+                that highlight their distinct textures. It is kilometer-zero dining at its most exclusive.
+            </p>
+
+            <!-- Image 3: Craft -->
+            <img src="https://prtimes.jp/data/corp/33064/cover/pc-32bc3aa23ebb731e321a7fafc6fe3dd0-eeeab91a10c17a71276520fc9c2ec9af.jpeg?auto=avif"
+                alt="PLACEHOLDER: Tsugaru Lacquerware" class="full-width">
+
+            <!-- Section 3: Craft -->
+            <h2 id="section3" class="lang-text" data-en="3. Tsugaru Lacquerware: The Colors of Wait"
+                data-fr="3. Laque de Tsugaru : Les Couleurs de l'Attente"
+                data-de="3. Tsugaru-Lackwaren: Die Farben des Wartens" data-pt="3. Laca de Tsugaru: As Cores da Espera"
+                data-jp="3. 津軽塗：「待つ」ことの色">
+                3. Tsugaru Lacquerware: The Colors of Wait
+            </h2>
+            <p class="lang-text"
+                data-en="Throughout the ryokan, you will notice intricate, speckled patterns on tables, chopsticks, and wall art. This is 'Tsugaru Nuri'. To achieve this pattern, craftsmen apply 48 layers of lacquer over several months, polishing them down to reveal the colorful layers beneath. It is said to represent the endurance of the northern people waiting for spring."
+                data-fr="Dans tout le ryokan, vous remarquerez des motifs mouchetés complexes sur les tables, les baguettes et les œuvres murales. C'est le 'Tsugaru Nuri'. Pour obtenir ce motif, les artisans appliquent 48 couches de laque sur plusieurs mois, les polissant pour révéler les couches colorées en dessous. On dit que cela représente l'endurance des gens du nord attendant le printemps."
+                data-de="Im gesamten Ryokan werden Sie komplizierte, gesprenkelte Muster auf Tischen, Essstäbchen und Wandkunst bemerken. Das ist 'Tsugaru Nuri'. Um dieses Muster zu erreichen, tragen Handwerker über mehrere Monate hinweg 48 Schichten Lack auf und polieren sie ab, um die farbigen Schichten darunter freizulegen. Es heißt, es repräsentiere die Ausdauer der Menschen im Norden, die auf den Frühling warten."
+                data-pt="Por todo o ryokan, você notará padrões intrincados e salpicados em mesas, pauzinhos e arte na parede. Isso é 'Tsugaru Nuri'. Para alcançar esse padrão, os artesãos aplicam 48 camadas de laca ao longo de vários meses, polindo-as para revelar as camadas coloridas por baixo. Diz-se que representa a resistência do povo do norte esperando pela primavera."
+                data-jp="旅館の至る所で、テーブルや箸、壁のアートに複雑な斑点模様が施されていることに気づくでしょう。これが「津軽塗」です。この模様を出すために、職人は数ヶ月かけて48回もの漆を塗り重ね、それを研ぎ出すことで下の色層を浮かび上がらせます。それは、春を待つ北国の人々の忍耐強さを表していると言われています。">
+                Throughout the ryokan, you will notice intricate, speckled patterns on tables, chopsticks, and wall art.
+                This is 'Tsugaru Nuri'. To achieve this pattern, craftsmen apply 48 layers of lacquer over several
+                months, polishing them down to reveal the colorful layers beneath. It is said to represent the endurance
+                of the northern people waiting for spring.
+            </p>
+
+            <!-- Location / Map Section -->
+            <div id="access" class="location-box"
+                style="margin: 40px 0; padding: 20px; background: white; border-radius: 8px;">
+                <h3>📍 Access / Location Context</h3>
+                <p class="lang-text" data-en="Owani Onsen, Minamitsugaru District, Aomori, Japan"
+                    data-fr="Owani Onsen, District de Minamitsugaru, Aomori, Japon"
+                    data-de="Owani Onsen, Bezirk Minamitsugaru, Aomori, Japan"
+                    data-pt="Owani Onsen, Distrito de Minamitsugaru, Aomori, Japão" data-jp="青森県南津軽郡 大鰐温泉">
+                    Owani Onsen, Minamitsugaru District, Aomori, Japan
+                </p>
+                <!-- Google Maps Embed: z=5 for Country View -->
+                <iframe width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen
+                    src="https://maps.google.com/maps?q=Owani+Onsen+Aomori&t=&z=5&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="related-articles" style="margin-top: 60px; border-top: 1px solid #e2e8f0; padding-top: 40px;">
+                <h3 style="color: var(--primary);">Discover More Japan</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <a href="articles_gen_sushi.html" style="text-decoration: none;">
+                        <div
+                            style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                            <div
+                                style="height: 120px; background-color: #0f172a; color: white; display: flex; align-items: center; justify-content: center;">
+                                SUSHI</div>
+                            <div style="padding: 15px;">
+                                <h4 style="margin: 0; color: #1e293b;">Ginza Sushi Guide</h4>
+                                <p style="font-size: 0.8rem; color: #64748b;">The silence of the master.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="articles_gen_matcha.html" style="text-decoration: none;">
+                        <div
+                            style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                            <div
+                                style="height: 120px; background-color: #15803d; color: white; display: flex; align-items: center; justify-content: center;">
+                                MATCHA</div>
+                            <div style="padding: 15px;">
+                                <h4 style="margin: 0; color: #1e293b;">Kyoto Matcha</h4>
+                                <p style="font-size: 0.8rem; color: #64748b;">The jade foam of Uji.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Source Credit -->
+            <div class="credits">
+                <hr>
+                <p><small>Content Source based on: <a href="https://prtimes.jp/main/html/searchrlp/company_id/33064"
+                            target="_blank">Hoshino Resorts Press Release List</a><br>
+                        <span class="lang-text"
+                            data-en="This article is a curated introduction for KAKEHASHI readers. All rights belong to the original owners."
+                            data-fr="Cet article est une introduction organisée pour les lecteurs de KAKEHASHI. Tous les droits appartiennent aux propriétaires originaux."
+                            data-de="Dieser Artikel ist eine kuratierte Einführung für KAKEHASHI-Leser. Alle Rechte liegen bei den ursprünglichen Eigentümern."
+                            data-pt="Este artigo é uma introdução curada para leitores da KAKEHASHI. Todos os direitos pertencem aos proprietários originais."
+                            data-jp="当記事はKAKEHASHI読者向けの紹介記事です。権利はすべて元の所有者に帰属します。">
+                            This article is a curated introduction for KAKEHASHI readers. All rights belong to the
+                            original owners.
+                        </span></small></p>
+            </div>
+
+            <!-- Language Switcher Script (Client-side) -->
+            <script>
+                function switchLang(lang) {
+                    // Update Buttons
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+                    });
+
+                    // Update Text
+                    document.querySelectorAll('.lang-text').forEach(el => {
+                        if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+                    });
+                }
+            </script>
+        </article>
+
+    </div>
+</body>
+
+</html>

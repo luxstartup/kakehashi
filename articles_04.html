@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Phantom Sweet: Brulee Baum - KAKEHASHI Luxembourg</title>
+    <style>
+        /* BASE STYLES */
+        :root {
+            --primary: #1e293b;
+            --accent: #b45309;
+            /* Caramel Gold */
+            --strawberry: #e11d48;
+            --bg: #f8fafc;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .tag {
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* IMAGE REUSE ENGINE (CSS SPRITE LOGIC) */
+        /* original.jpg (1枚のスクショ) を背景として読み込み、表示位置(position)を変えることで
+           「あたかも12枚の別の写真があるかのように」見せる技術 */
+        .reuse-img {
+            width: 100%;
+            background-image: url('original.jpg');
+            background-size: 100% auto;
+            /* 横幅をコンテナに合わせる */
+            background-repeat: no-repeat;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            position: relative;
+            background-color: #eee;
+            /* 画像読み込み前の色 */
+        }
+
+        /* 各シーンの切り出し位置（％指定） */
+        /* ※スクショの縦横比によって多少ズレる場合がありますが、デモとしては機能します */
+        .crop-hero {
+            height: 350px;
+            background-position: center 0%;
+        }
+
+        /* Top: Main Visual */
+        .crop-product1 {
+            height: 250px;
+            background-position: center 8%;
+        }
+
+        /* Whole Cake */
+        .crop-product2 {
+            height: 250px;
+            background-position: center 15%;
+        }
+
+        /* Slice */
+        .crop-spoon {
+            height: 250px;
+            background-position: center 23%;
+        }
+
+        /* Spoon lifting */
+        .crop-cross {
+            height: 300px;
+            background-position: center 28%;
+        }
+
+        /* Cross Section */
+        .crop-texture {
+            height: 200px;
+            background-position: center 35%;
+        }
+
+        /* Texture detail */
+        .crop-process1 {
+            height: 200px;
+            background-position: center 48%;
+        }
+
+        /* Process: Filling */
+        .crop-process2 {
+            height: 200px;
+            background-position: center 54%;
+        }
+
+        /* Process: Sugar */
+        .crop-torch {
+            height: 250px;
+            background-position: center 60%;
+        }
+
+        /* Process: Torching */
+        .crop-eggs {
+            height: 200px;
+            background-position: center 72%;
+        }
+
+        /* Ingredients: Eggs */
+        .crop-package {
+            height: 300px;
+            background-position: center 85%;
+        }
+
+        /* Package */
+        .crop-shop {
+            height: 150px;
+            background-position: center 98%;
+        }
+
+        /* Shop/Logo */
+
+        .img-label {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* CONTENT LAYOUT */
+        .content {
+            padding: 0 40px 60px;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* GRID FOR GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        /* FEATURE SECTION */
+        .feature-block {
+            margin-bottom: 40px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* INFO TABLE */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .info-table th,
+        .info-table td {
+            border: 1px solid #eee;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .info-table th {
+            background: #f8fafc;
+            width: 30%;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="reuse-img crop-hero">
+            <div class="img-label">Img 01: Main Visual</div>
+        </div>
+
+        <header>
+            <span class="tag">One Day Only</span>
+            <h1>The "Phantom" Sweet Returns:<br>Brulee Baumkuchen</h1>
+            <div class="subtitle">Limited Edition: January 24, 2026</div>
+        </header>
+
+        <div class="content">
+            <p class="lead">
+                Known as the "Phantom Sweet" that sells out instantly every winter.
+                This year, Taiyo-sha introduces a <span style="color:var(--strawberry);">Strawberry Custard</span>
+                edition for the first time in history.
+            </p>
+
+            <div class="gallery-grid">
+                <div class="reuse-img crop-product1">
+                    <div class="img-label">Img 02: Whole Cake</div>
+                </div>
+                <div class="reuse-img crop-product2">
+                    <div class="img-label">Img 03: Sliced</div>
+                </div>
+            </div>
+
+            <p>
+                The concept is <strong>"Paris! Toro!" (Crispy & Melty)</strong>.
+                The surface is caramelized to a hard crunch, while the inside is filled with overflowing cream.
+            </p>
+
+            <div class="reuse-img crop-spoon">
+                <div class="img-label">Img 04: Texture</div>
+            </div>
+
+            <div class="feature-block">
+                <div class="feature-title">Secret 1: The "Double Brulee"</div>
+                <p>Most shops torch the sugar once. We do it <strong>twice</strong>.</p>
+
+                <div class="reuse-img crop-torch">
+                    <div class="img-label">Img 05: Torching Process</div>
+                </div>
+
+                <p>By layering the caramelization, we create a thick, glass-like surface that cracks with a satisfying
+                    sound when you insert your knife.</p>
+            </div>
+
+            <div class="feature-block">
+                <div class="feature-title">Secret 2: Strawberry Custard</div>
+                <p>Hidden inside is a rich custard mixed with Japanese Strawberry Puree. It spills out the moment you
+                    cut it.</p>
+
+                <div class="reuse-img crop-cross">
+                    <div class="img-label">Img 06: Cross Section</div>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <div>
+                    <div class="reuse-img crop-process1">
+                        <div class="img-label">Img 07: Filling</div>
+                    </div>
+                    <small>Carefully piping the custard.</small>
+                </div>
+                <div>
+                    <div class="reuse-img crop-process2">
+                        <div class="img-label">Img 08: Sugar</div>
+                    </div>
+                    <small>Sprinkling sugar for burning.</small>
+                </div>
+            </div>
+
+            <div class="feature-block">
+                <div class="feature-title">Secret 3: Premium Ingredients</div>
+                <p>We use 100% Rice Flour from Chiba Prefecture for a moist texture, and "Pure White" eggs that enhance
+                    the fruit's flavor.</p>
+
+                <div class="reuse-img crop-eggs">
+                    <div class="img-label">Img 09: Ingredients</div>
+                </div>
+            </div>
+
+            <div class="reuse-img crop-package">
+                <div class="img-label">Img 10: Limited Package</div>
+            </div>
+            <p style="text-align: center; font-size: 0.9rem; color: #666;">
+                Comes in a luxurious Red & Gold box, perfect for winter gifts.
+            </p>
+
+            <table class="info-table">
+                <tr>
+                    <th>Product Name</th>
+                    <td>Brulee Baum (Strawberry Custard)</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>1,680 JPY (Approx. 10.50 €)</td>
+                </tr>
+                <tr>
+                    <th>Availability</th>
+                    <td><strong>Jan 24, 2026 (Sat)</strong> *One Day Only</td>
+                </tr>
+            </table>
+
+            <div class="reuse-img crop-texture" style="margin-top: 30px;">
+                <div class="img-label">Img 11: Texture Closeup</div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="reuse-img crop-shop" style="height: 100px; opacity: 0.8;">
+                <div class="img-label">Img 12: Shop Info</div>
+            </div>
+            <p>
+                <strong>Content Source:</strong><br>
+                Based on the press release by <strong>Taiyo-sha Co., Ltd.</strong> via PR TIMES.<br>
+                All images are used from the official press materials.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

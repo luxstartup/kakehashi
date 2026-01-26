@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Matcha experience - KAKEHASHI Luxembourg</title>
+    <style>
+        /* Shared CSS from index.html concept */
+        :root {
+            --primary: #0f172a;
+            --accent: #15803d;
+            /* Green for Matcha */
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Language Switcher UI */
+        .lang-switcher {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            background: #f1f5f9;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .full-width {
+            width: 100%;
+            display: block;
+        }
+
+        /* Editorial Note Style from Guidelines */
+        .editorial-note {
+            background-color: #f0fdf4;
+            /* Light green/fresh background */
+            border-left: 5px solid #15803d;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .editorial-note h3 {
+            margin-top: 0;
+            color: #15803d;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .editorial-note p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #14532d;
+            margin-bottom: 0;
+        }
+
+        /* Knowledge Box Style */
+        .knowledge-box {
+            background-color: #fff7ed;
+            /* Light orange */
+            border: 1px solid #fdba74;
+            padding: 25px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .knowledge-box h4 {
+            margin-top: 0;
+            color: #c2410c;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--primary);
+        }
+
+        .credits {
+            margin-top: 60px;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Language Controls -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+            <button class="lang-btn" onclick="switchLang('de')">DE</button>
+            <button class="lang-btn" onclick="switchLang('pt')">PT</button>
+            <button class="lang-btn" onclick="switchLang('jp')">JP</button>
+        </div>
+
+        <article>
+            <!-- 1. Editorial Note: Why this article? -->
+            <div class="editorial-note">
+                <h3 class="lang-text" data-en="To Our Luxembourg Readers" data-fr="À Nos Lecteurs Luxembourgeois"
+                    data-de="An unsere Luxemburger Leser" data-pt="Aos Nossos Leitores de Luxemburgo"
+                    data-jp="ルクセンブルクの皆様へ">
+                    To Our Luxembourg Readers
+                </h3>
+                <p class="lang-text"
+                    data-en="Luxembourg has embraced green tea, but have you tasted the 'First Flush' (Shincha)? It is to tea what 'Beaujolais Nouveau' is to wine—a fresh, vibrant celebration of the new season. This Kyoto matcha isn't for baking; it is for pure enjoyment."
+                    data-fr="Le Luxembourg a adopté le thé vert, mais avez-vous goûté le 'First Flush' (Shincha) ? C'est au thé ce que le 'Beaujolais Nouveau' est au vin : une célébration fraîche et vibrante de la nouvelle saison. Ce matcha de Kyoto n'est pas fait pour la pâtisserie ; il est fait pour le pur plaisir."
+                    data-de="Luxemburg hat grünen Tee angenommen, aber haben Sie schon 'First Flush' (Shincha) probiert? Er ist für Tee das, was 'Beaujolais Nouveau' für Wein ist – eine frische, lebendige Feier der neuen Saison. Dieser Kyoto-Matcha ist nicht zum Backen gedacht; er ist für den puren Genuss."
+                    data-pt="O Luxemburgo adotou o chá verde, mas já provou o 'First Flush' (Shincha)? É para o chá o que o 'Beaujolais Nouveau' é para o vinho—uma celebração fresca e vibrante da nova estação. Este matcha de Quioto não é para pastelaria; é para puro prazer."
+                    data-jp="ルクセンブルクでも緑茶は親しまれていますが、「新茶」を味わったことはありますか？それはワインにとっての「ボジョレー・ヌーボー」のようなもの。この京都産抹茶は、料理用ではなく、純粋に飲むための芸術品です。">
+                    Luxembourg has embraced green tea, but have you tasted the 'First Flush' (Shincha)? It is to tea
+                    what 'Beaujolais Nouveau' is to wine—a fresh, vibrant celebration of the new season. This Kyoto
+                    matcha isn't for baking; it is for pure enjoyment.
+                </p>
+            </div>
+
+            <!-- 2. Main Content -->
+            <h1 class="lang-text" data-en="The 'Jade Foam'. Kyoto's 300-Year Legacy."
+                data-fr="L'« Écume de Jade ». L'héritage de 300 ans de Kyoto."
+                data-de="Der 'Jadeschaum'. Kyotos 300-jähriges Erbe."
+                data-pt="A 'Espuma de Jade'. O legado de 300 anos de Quioto." data-jp="「翡翠の泡」。京都300年の遺産。">
+                The 'Jade Foam'. Kyoto's 300-Year Legacy.
+            </h1>
+
+            <img src="https://prcdn.freetls.fastly.net/release_image/145123/112/145123-112-6c33af9244c83502fb7a90be7531c258-1920x1280.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+                alt="Traditional Matcha Set" class="full-width">
+
+            <p class="lead lang-text"
+                data-en="Cultivated in the misty hills of Uji. Ground by stone mills in total darkness. A sip of silence in a busy world."
+                data-fr="Cultivé dans les collines brumeuses d'Uji. Moulu par des meules de pierre dans l'obscurité totale. Une gorgée de silence dans un monde agité."
+                data-de="Angebaut in den nebligen Hügeln von Uji. In völliger Dunkelheit von Steinmühlen gemahlen. Ein Schluck Stille in einer geschäftigen Welt."
+                data-pt="Cultivado nas colinas nebulosas de Uji. Moído por moinhos de pedra na escuridão total. Um gole de silêncio num mundo agitado."
+                data-jp="宇治の霧深い丘で育てられ、完全な暗闇の中で石臼によって挽かれる。忙しない世界における、静寂の一服。">
+                Cultivated in the misty hills of Uji. Ground by stone mills in total darkness. A sip of silence in a
+                busy world.
+            </p>
+
+            <!-- Knowledge Box -->
+            <div class="knowledge-box">
+                <h4 class="lang-text" data-en="🇯🇵 Keyword: Umami (旨味)" data-fr="🇯🇵 Mot-clé: Umami (旨味)"
+                    data-de="🇯🇵 Stichwort: Umami (旨味)" data-pt="🇯🇵 Palavra-chave: Umami (旨味)"
+                    data-jp="🇯🇵 キーワード: 旨味 (Umami)">
+                    🇯🇵 Keyword: Umami (旨味)
+                </h4>
+                <p class="lang-text"
+                    data-en="Often translated as 'savory', true Umami in Matcha is a deep, broth-like richness that covers the tongue. Low-grade matcha is bitter; premium matcha is sweet and savory, almost like a vegetable soup."
+                    data-fr="Souvent traduit par 'savoureux', le véritable Umami dans le Matcha est une richesse profonde, semblable à un bouillon, qui couvre la langue. Le matcha de basse qualité est amer; le matcha premium est doux et savoureux, presque comme une soupe de légumes."
+                    data-de="Oft als 'herzhaft' übersetzt, ist echtes Umami in Matcha eine tiefe, brüheartige Fülle, die die Zunge bedeckt. Minderwertiger Matcha ist bitter; Premium-Matcha ist süß und herzhaft, fast wie eine Gemüsesuppe."
+                    data-pt="Frequentemente traduzido como 'saboroso', o verdadeiro Umami no Matcha é uma riqueza profunda, semelhante a um caldo, que cobre a língua. O matcha de baixa qualidade é amargo; o matcha premium é doce e saboroso, quase como uma sopa de vegetais."
+                    data-jp="「うまみ」は抹茶の真髄です。上質な抹茶は苦くなく、出汁のように濃厚で、海苔や若草のような甘みとコクが舌を覆います。これが「本物」の証です。">
+                    Often translated as 'savory', true Umami in Matcha is a deep, broth-like richness that covers the
+                    tongue. Low-grade matcha is bitter; premium matcha is sweet and savory, almost like a vegetable
+                    soup.
+                </p>
+            </div>
+
+            <!-- Detail Section -->
+            <h2 class="lang-text" data-en="Shadowed for 20 Days" data-fr="Ombragé pendant 20 jours"
+                data-de="20 Tage lang beschattet" data-pt="Sombreado por 20 dias" data-jp="20日間の被覆栽培">
+                Shadowed for 20 Days
+            </h2>
+
+            <img src="https://prcdn.freetls.fastly.net/release_image/145123/112/145123-112-0fc10fa018fc0420922a6878025aab70-1920x1280.jpg?width=1950&height=1350&quality=85%2C65&format=jpeg&auto=webp&fit=bounds&bg-color=fff"
+                alt="Tea Plantation" class="full-width">
+
+            <p class="lang-text"
+                data-en="The secret to the vibrant green color is 'Oishita' (shading). By blocking sunlight for weeks before harvest, the tea leaves produce high chlorophyll and amino acids (Theanine), reducing bitterness and boosting the Umami flavor."
+                data-fr="Le secret de la couleur vert vif est l'« Oishita » (ombrage). En bloquant la lumière du soleil pendant des semaines avant la récolte, les feuilles de thé produisent beaucoup de chlorophylle et d'acides aminés (théanine), réduisant l'amertume et amplifiant la saveur Umami."
+                data-de="Das Geheimnis der leuchtend grünen Farbe ist 'Oishita' (Beschattung). Indem das Sonnenlicht wochenlang vor der Ernte blockiert wird, produzieren die Teeblätter viel Chlorophyll und Aminosäuren (Theanin), was die Bitterkeit reduziert und den Umami-Geschmack verstärkt."
+                data-pt="O segredo da cor verde vibrante é o 'Oishita' (sombreamento). Ao bloquear a luz solar por semanas antes da colheita, as folhas de chá produzem alta clorofila e aminoácidos (teanina), reduzindo o amargor e aumentando o sabor Umami."
+                data-jp="鮮やかな緑色の秘密は「覆下（おおいした）栽培」にあります。収穫前の数週間、日光を遮断することで、茶葉は葉緑素とテアニン（旨味成分）を蓄え、渋みのない濃厚な味わいに育ちます。">
+                The secret to the vibrant green color is 'Oishita' (shading). By blocking sunlight for weeks before
+                harvest, the tea leaves produce high chlorophyll and amino acids (Theanine), reducing bitterness and
+                boosting the Umami flavor.
+            </p>
+
+            <!-- Location / Map Section -->
+            <div class="location-box" style="margin: 40px 0; padding: 20px; background: #f8fafc; border-radius: 8px;">
+                <h3>📍 Access</h3>
+                <p class="lang-text" data-en="Hashihime-cho, Uji City, Kyoto Prefecture, Japan"
+                    data-fr="Hashihime-cho, Ville d'Uji, Préfecture de Kyoto, Japon"
+                    data-de="Hashihime-cho, Stadt Uji, Präfektur Kyoto, Japan"
+                    data-pt="Hashihime-cho, Cidade de Uji, Prefeitura de Quioto, Japão" data-jp="京都府宇治市 橋姫町">
+                    Hashihime-cho, Uji City, Kyoto Prefecture, Japan
+                </p>
+                <!-- Google Maps Embed (Using a simple query embed format for demo) -->
+                <iframe width="100%" height="300" style="border:0;" loading="lazy" allowfullscreen
+                    src="https://maps.google.com/maps?q=Uji+City+Kyoto&t=&z=5&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+
+            <!-- 3. Source Credit -->
+            <div class="credits">
+                <hr>
+                <p><small>Content & Image Source: <a href="https://prtimes.jp/main/html/rd/p/000000888.000888888.html"
+                            target="_blank">Kyoto Uji Tea Association Press Release</a><br>
+                        <span class="lang-text"
+                            data-en="This article is a curated introduction for KAKEHASHI readers. All rights belong to the original owners."
+                            data-fr="Cet article est une introduction organisée pour les lecteurs de KAKEHASHI. Tous les droits appartiennent aux propriétaires originaux."
+                            data-de="Dieser Artikel ist eine kuratierte Einführung für KAKEHASHI-Leser. Alle Rechte liegen bei den ursprünglichen Eigentümern."
+                            data-pt="Este artigo é uma introdução curada para leitores da KAKEHASHI. Todos os direitos pertencem aos proprietários originais."
+                            data-jp="当記事はKAKEHASHI読者向けの紹介記事です。権利はすべて元の所有者に帰属します。">
+                            This article is a curated introduction for KAKEHASHI readers. All rights belong to the
+                            original owners.
+                        </span></small></p>
+            </div>
+
+            <!-- Language Switcher Script (Client-side) -->
+            <script>
+                function switchLang(lang) {
+                    // Update Buttons
+                    document.querySelectorAll('.lang-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+                    });
+
+                    // Update Text
+                    document.querySelectorAll('.lang-text').forEach(el => {
+                        if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+                    });
+                }
+            </script>
+        </article>
+
+    </div>
+</body>
+
+</html>

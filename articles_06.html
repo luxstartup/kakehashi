@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Japan: The Snow Kominka - KAKEHASHI Travel</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #a29bfe;
+            /* Lavender/Snow shadow */
+            --bg: #f5f6fa;
+            --text-body: #636e72;
+            --overlay-text: #ffffff;
+        }
+
+        body {
+            font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--primary);
+            line-height: 1.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            padding: 8px 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            border: none;
+            background: none;
+            font-weight: bold;
+            color: #b2bec3;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn.active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* Hero Section (Full Width) */
+        .hero {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .hero-text {
+            position: absolute;
+            bottom: 80px;
+            left: 50px;
+            color: white;
+            max-width: 600px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .category-tag {
+            background: white;
+            color: var(--primary);
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            font-family: serif;
+        }
+
+        .hero-lead {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Content Layout */
+        .content {
+            padding: 80px 100px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+        }
+
+        .drop-cap::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            margin-right: 15px;
+            line-height: 1;
+            color: var(--primary);
+        }
+
+        /* Parallax / Full Bleed Images */
+        .full-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            margin: 60px 0;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .two-col img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 4px;
+            /* Subtle radius */
+        }
+
+        .col-text h2 {
+            font-family: serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .col-text p {
+            color: var(--text-body);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 40px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .info-title {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .book-btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .book-btn:hover {
+            background: #636e72;
+        }
+
+        /* Quote */
+        blockquote {
+            font-size: 1.8rem;
+            font-family: serif;
+            font-style: italic;
+            text-align: center;
+            margin: 80px 0;
+            color: #2d3436;
+        }
+
+        /* Editorial Note Style */
+        .editorial-note {
+            background-color: #f0f3f5;
+            border-left: 4px solid var(--accent);
+            padding: 30px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .note-label {
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b2bec3;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .editorial-note h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-family: serif;
+        }
+
+        .editorial-note p {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #4d4d4d;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Multilingual Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+        <button class="lang-btn" onclick="switchLang('jp')">JP</button>
+    </div>
+
+    <div class="container">
+
+        <!-- Hero -->
+        <div class="hero">
+            <img src="https://images.unsplash.com/photo-1542640244-7e672d6bd4e8?auto=format&fit=crop&w=1600&q=80"
+                class="hero-img" alt="Snowy Japanese House">
+            <div class="hero-text">
+                <span class="category-tag">Week 3: Travel & Experience</span>
+                <h1 class="lang-text" data-en="Silence in White.<br>The Snowy Sanctuary."
+                    data-fr="Silence en Blanc.<br>Le Sanctuaire Enneigé." data-jp="静寂の白。<br>雪ごもりの隠れ家。">
+                    Silence in White.<br>The Snowy Sanctuary.
+                </h1>
+                <p class="hero-lead lang-text"
+                    data-en="A 150-year-old Kominka reborn in Nagano. Experience the ultimate luxury: Doing absolutely nothing."
+                    data-fr="Une Kominka de 150 ans renaît à Nagano. L'expérience du luxe ultime : Ne rien faire du tout."
+                    data-jp="長野の山奥、150年の歴史を持つ古民家が再生。究極の贅沢、「何もしない時間」を。">A 150-year-old Kominka reborn in Nagano.
+                    Experience the ultimate luxury: Doing absolutely nothing.</p>
+            </div>
+        </div>
+
+        <!-- Article Body -->
+        <div class="content">
+
+            <!-- New Editorial Intro for Luxembourg -->
+            <div class="editorial-note">
+                <span class="note-label lang-text" data-en="To Our Luxembourg Readers"
+                    data-fr="À Nos Lecteurs Luxembourgeois" data-jp="ルクセンブルクの皆様へ">To Our Luxembourg Readers</span>
+                <h3 class="lang-text" data-en="Why travel 9,000km for 'Nothing'?"
+                    data-fr="Pourquoi faire 9 000 km pour 'Rien' ?" data-jp="なぜ9,000kmも移動して「何もしない」のか？">
+                    Why travel 9,000km for 'Nothing'?
+                </h3>
+                <p class="lang-text"
+                    data-en="In Luxembourg, we live fast. We are the heart of Europe, busy, efficient, and always connected. But Japan offers something we have lost: <strong>'Ma' (間)</strong> — the beauty of empty space and silence. This Kominka isn't just a hotel; it's a time machine that takes you back to a simpler, quieter earth. It is the ultimate detox for the busy European soul."
+                    data-fr="Au Luxembourg, nous vivons vite. Nous sommes le cœur de l'Europe, occupés, efficaces et toujours connectés. Mais le Japon offre quelque chose que nous avons perdu : le <strong>'Ma' (間)</strong> — la beauté de l'espace vide et du silence. Cette Kominka n'est pas juste un hôtel ; c'est une machine à remonter le temps vers une terre plus simple et plus calme. C'est la détox ultime pour l'âme européenne occupée."
+                    data-jp="ルクセンブルクでの生活はスピーディーです。欧州の中心で、効率的で、常に繋がっています。しかし日本には、私たちが失った<strong>「間（Ma）」</strong>があります。この古民家は単なるホテルではなく、シンプルで静かな地球へと誘うタイムマシンです。忙しい欧州人の魂にとって、これ以上のデトックスはありません。">
+                    In Luxembourg, we live fast. We are the heart of Europe, busy, efficient, and always connected. But
+                    Japan offers something we have lost: <strong>'Ma' (間)</strong> — the beauty of empty space and
+                    silence. This Kominka isn't just a hotel; it's a time machine that takes you back to a simpler,
+                    quieter earth. It is the ultimate detox for the busy European soul.</p>
+            </div>
+
+            <p class="drop-cap lang-text"
+                data-en="Japan is not just Tokyo and Kyoto. True luxury lies in the deep silence of the mountains. 'SATOHYAMA' is a private villa limited to one group per day, renovated from a feudal-era folk house. Here, there are no TVs, no clocks. Only the sound of falling snow and the warmth of the irori hearth."
+                data-fr="Le Japon, ce n'est pas que Tokyo et Kyoto. Le vrai luxe réside dans le silence profond des montagnes. 'SATOHYAMA' est une villa privée limitée à un groupe par jour, rénovée à partir d'une maison féodale. Ici, ni télé, ni horloge. Juste le son de la neige qui tombe et la chaleur de l'irori."
+                data-jp="日本は東京と京都だけではありません。真の贅沢は、山々の深い静寂の中にあります。「SATOHYAMA」は、1日1組限定の古民家ヴィラ。ここにはテレビも時計もありません。あるのは、雪が降り積もる音と、囲炉裏の暖かさだけです。">
+                Japan is not just Tokyo and Kyoto. True luxury lies in the deep silence of the mountains. 'SATOHYAMA' is
+                a private villa limited to one group per day, renovated from a feudal-era folk house. Here, there are no
+                TVs, no clocks. Only the sound of falling snow and the warmth of the irori hearth.</p>
+
+            <!-- Full Bleed Image -->
+            <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=1200&q=80"
+                class="full-img" alt="Japanese Tea Room">
+
+            <!-- Section 1 -->
+            <div class="two-col">
+                <div class="col-text">
+                    <h2 class="lang-text" data-en="Unfiltered History" data-fr="L'Histoire Sans Filtre"
+                        data-jp="歴史をそのままに">Unfiltered History</h2>
+                    <p class="lang-text"
+                        data-en="The pillars are black with soot from 150 years of fires. The designers dared not to paint over them. Modern comforts (floor heating, Simmons beds) are invisibly integrated, preserving the rugged beauty of the past while ensuring absolute comfort."
+                        data-fr="Les piliers sont noirs de suie après 150 ans de feux. Les designers n'ont pas osé les repeindre. Le confort moderne (chauffage au sol, lits Simmons) est intégré de manière invisible, préservant la beauté brute du passé tout en assurant un confort absolu."
+                        data-jp="150年の煤（すす）で黒光りする柱。あえて塗装せず、そのまま残した梁。床暖房やシモンズ製ベッドなどの現代的な快適さは見えないように統合され、過去の荒々しい美しさと、絶対的な快適さが共存しています。">
+                        The pillars are black with soot from 150 years of fires. The designers dared not to paint over
+                        them. Modern comforts (floor heating, Simmons beds) are invisibly integrated, preserving the
+                        rugged beauty of the past while ensuring absolute comfort.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1599619351208-3e6c839d6828?auto=format&fit=crop&w=800&q=80"
+                    alt="Irori Fireplace">
+            </div>
+
+            <blockquote class="lang-text" data-en="“We sell time, not rooms.”"
+                data-fr="“Nous vendons du temps, pas des chambres.”" data-jp="「私たちが売るのは部屋ではなく、時間です。」">“We sell time, not
+                rooms.”</blockquote>
+
+            <!-- Section 2 -->
+            <div class="two-col">
+                <img src="https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=800&q=80"
+                    alt="Private Onsen">
+                <div class="col-text">
+                    <h2 class="lang-text" data-en="The Snow Onsen" data-fr="L'Onsen des Neiges" data-jp="雪見風呂">The Snow
+                        Onsen</h2>
+                    <p class="lang-text"
+                        data-en="Open the sliding glass doors, and the freezing mountain air hits your face, but your body remains wrapped in 41°C natural spring water. The 'Yukimi-buro' (snow-viewing bath) is a quintessential Japanese winter experience that cleanses the soul."
+                        data-fr="Ouvrez les portes vitrées coulissantes, et l'air glacial de la montagne frappe votre visage, mais votre corps reste enveloppé dans une eau de source naturelle à 41°C. Le 'Yukimi-buro' (bain de neige) est une expérience hivernale japonaise par excellence qui purifie l'âme."
+                        data-jp="ガラス戸を開ければ、氷点下の山の空気が頬を撫でますが、体は41度の天然温泉に包まれています。「雪見風呂」は、魂を洗うような日本の冬の真髄です。">Open the
+                        sliding glass doors, and the freezing mountain air hits your face, but your body remains wrapped
+                        in 41°C natural spring water. The 'Yukimi-buro' (snow-viewing bath) is a quintessential Japanese
+                        winter experience that cleanses the soul.</p>
+                </div>
+            </div>
+
+            <!-- Info Box -->
+            <div class="info-box">
+                <span class="info-title lang-text" data-en="Access & Information" data-fr="Accès & Informations"
+                    data-jp="アクセス・詳細">Access & Information</span>
+                <p class="lang-text"
+                    data-en="Takeshi Village, Nagano Pref.<br>2.5 hours from Tokyo via Shinkansen + Private Transfer."
+                    data-fr="Village de Takeshi, Préf. de Nagano.<br>2,5 heures de Tokyo via Shinkansen + Transfert Privé."
+                    data-jp="長野県武石村<br>東京から新幹線と専用送迎で約2時間半。">Takeshi Village, Nagano Pref.<br>2.5 hours from Tokyo via
+                    Shinkansen + Private Transfer.</p>
+
+                <a href="#" class="book-btn lang-text" data-en="Request Reservation (Concierge)"
+                    data-fr="Demander une Réservation" data-jp="予約リクエスト (コンシェルジュ)">Request Reservation (Concierge)</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.innerText.toLowerCase() === lang) btn.classList.add('active');
+            });
+            document.querySelectorAll('.lang-text').forEach(el => {
+                if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
+            });
+        }
+    </script>
+
+</body>
+
+</html>
