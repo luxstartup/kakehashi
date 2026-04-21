@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Konbini Revolution</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --accent-pink: #ff85a1;
+            --accent-blue: #74c0fc;
+            --text-dark: #2d3436;
+            --soft-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ff9f43 0%, #ee5253 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .feed {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #4834d4;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .sub-caption {
+            font-size: 0.95rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        .mood-box {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #d1d8e0;
+        }
+
+        .badge {
+            background: #ffbe76;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #a4b0be;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <a href="../../prototype_html/index_phase1.html#discover" class="back-link">
+            <i data-lucide="arrow-left"></i> Back
+        </a>
+        <h1>More Than a Store 🇯🇵</h1>
+        <p>Why "Konbini" are basically public infrastructure.</p>
+    </div>
+
+    <div class="feed">
+
+        <!-- Scene 1 -->
+        <div class="post-card">
+            <span class="tag">#Routine</span>
+            <h2>Just a Quick Stop</h2>
+            <img src="project06_01.png" alt="Entering convenience store">
+            <p class="caption"><b>"Just grabbing a snack…"</b></p>
+            <p>Walking into a Japanese convenience store (konbini) feels normal at first. Bright lights, clean aisles,
+                friendly greeting. But look closer.</p>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="post-card">
+            <span class="tag">#Surprise</span>
+            <h2>Wait, What?</h2>
+            <img src="project06_02.png" alt="Shocked at services">
+            <p class="caption"><b>"Wait… you can pay bills here?"</b></p>
+            <p>It's not just chips and soda. You see people paying utility bills, buying concert tickets, printing
+                documents, and even shipping packages.</p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="post-card">
+            <span class="tag">#Overwhelmed</span>
+            <h2>Everything Hub</h2>
+            <img src="project06_03.png" alt="Montage of services">
+            <p class="caption"><b>"ATM. Fresh meals. Tickets. Delivery."</b></p>
+            <p class="sub-caption">24/7.</p>
+            <p>Need cash? ATM. Hungry? Restaurant-quality bento. Need a clean shirt? Sometimes they have that too. It's
+                an entire city's worth of services in one room.</p>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="post-card">
+            <span class="tag">#MindBlown</span>
+            <h2>Infrastructure</h2>
+            <img src="project06_04.png" alt="Traveler admiring store outside">
+            <p class="caption"><b>"This isn’t a store."</b></p>
+            <p class="sub-caption">It’s infrastructure.</p>
+            <p>In Japan, the konbini isn't just a shop; it's a lifeline. Safe, reliable, and always open. It's the
+                beating heart of the neighborhood.</p>
+        </div>
+
+        <div class="mood-box">
+            <h3>💡 Culture Note <span class="badge">KONBINI LIFE</span></h3>
+            <p>There are over 50,000 convenience stores in Japan! They are so essential that in disasters, they are
+                designated as safety stations for food, water, and restroom access.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with ✨ for Japan lovers | 2026
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
