@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The $1 Wonderland 🇯🇵</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --accent-pink: #ff85a1;
+            --accent-blue: #74c0fc;
+            --text-dark: #2d3436;
+            --soft-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .feed {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #4834d4;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .sub-caption {
+            font-size: 0.95rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        .mood-box {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #d1d8e0;
+        }
+
+        .badge {
+            background: #ffbe76;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #a4b0be;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <a href="../../prototype_html/index_phase1.html#discover" class="back-link">
+            <i data-lucide="arrow-left"></i> Back
+        </a>
+        <h1>Everything is $1? 🇯🇵</h1>
+        <p>The magic of Japanese 100-yen shops.</p>
+    </div>
+
+    <div class="feed">
+
+        <!-- Scene 1 -->
+        <div class="post-card">
+            <span class="tag">#Expectation</span>
+            <h2>Just a Discount Store?</h2>
+            <img src="project15_01.png" alt="Traveler entering 100 yen shop">
+            <p class="caption"><b>"Everything here is $1?"</b></p>
+            <p>I walked into a "100-yen shop" expecting cheap, disposable junk. You know, flimsy plastic and things that
+                break in a day.</p>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="post-card">
+            <span class="tag">#Surprise</span>
+            <h2>Quality Shock</h2>
+            <img src="project15_02.png" alt="Traveler holding stylish dish">
+            <p class="caption"><b>"This is $1?!"</b></p>
+            <p>I picked up a ceramic dish. It felt heavy, solid, and… actually stylish. I checked the price tag. 100 yen
+                (about $0.70 USD). How?!</p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="post-card">
+            <span class="tag">#Overwhelmed</span>
+            <h2>The Variety</h2>
+            <img src="project15_03.png" alt="Montage of high quality items">
+            <p class="caption"><b>"Kitchenware. Storage. Tech accessories."</b></p>
+            <p class="sub-caption">For the same price?</p>
+            <p>High-quality kitchen tools, smart storage solutions, cute stationery, even smartphone cables. The sheer
+                variety and quality were overwhelming in the best way possible.</p>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="post-card">
+            <span class="tag">#Satisfaction</span>
+            <h2>Smart Shopping</h2>
+            <img src="project15_04.png" alt="Traveler satisfied at checkout">
+            <p class="caption"><b>"This isn’t cheap."</b></p>
+            <p class="sub-caption">It’s efficient.</p>
+            <p>I left with a bag full of useful, well-designed items for the price of a coffee. Japanese 100-yen shops
+                aren't just about low prices; they're about incredible value.</p>
+        </div>
+
+        <div class="mood-box">
+            <h3>💡 Culture Note <span class="badge">DAISO & SERIA</span></h3>
+            <p>Famous chains like Daiso, Seria, and Can Do dominate Japan. They are famous for innovative products that
+                solve specific daily problems!</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with ✨ for Japan lovers | 2026
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
