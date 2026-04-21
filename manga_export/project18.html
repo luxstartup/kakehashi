@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is That Food Real? 🇯🇵</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --accent-pink: #ff85a1;
+            --accent-blue: #74c0fc;
+            --text-dark: #2d3436;
+            --soft-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .feed {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #4834d4;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .sub-caption {
+            font-size: 0.95rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        .mood-box {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #d1d8e0;
+        }
+
+        .badge {
+            background: #ffbe76;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #a4b0be;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <a href="../../prototype_html/index_phase1.html#discover" class="back-link">
+            <i data-lucide="arrow-left"></i> Back
+        </a>
+        <h1>It’s Not Real Food? 🇯🇵</h1>
+        <p>The art of Japanese food samples.</p>
+    </div>
+
+    <div class="feed">
+
+        <!-- Scene 1 -->
+        <div class="post-card">
+            <span class="tag">#Confusion</span>
+            <h2>Why is it Outside?</h2>
+            <img src="project18_01.png" alt="Traveler looking at display case">
+            <p class="caption"><b>"Why is the food outside?"</b></p>
+            <p>Walking past a restaurant, you see delicious plates of food sitting right in the window. Steaming ramen,
+                fresh sushi, crispy tempura. It looks incredible.</p>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="post-card">
+            <span class="tag">#Curiosity</span>
+            <h2>Too Real</h2>
+            <img src="project18_02.png" alt="Close up of food model">
+            <p class="caption"><b>"It looks real…"</b></p>
+            <p class="sub-caption">Too real.</p>
+            <p>You lean in closer. The soup glistens. The lettuce looks crisp. But wait... is it just sitting there?
+                Isn't it going bad?</p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="post-card">
+            <span class="tag">#Shock</span>
+            <h2>The Reveal</h2>
+            <img src="project18_03.png" alt="Staff holding plastic food">
+            <p class="caption"><b>"Wait… it’s FAKE?!"</b></p>
+            <p>Then a staff member opens the case and casually picks up a bowl of ramen... by the rim, spilling nothing.
+                It's hard plastic! It's a hyper-realistic model.</p>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="post-card">
+            <span class="tag">#Admiration</span>
+            <h2>Genius Menu</h2>
+            <img src="project18_04.png" alt="Real dish matching model">
+            <p class="caption"><b>"They show you exactly what you get."</b></p>
+            <p class="sub-caption">That’s genius.</p>
+            <p>You order the dish, and when it arrives, it looks exactly like the model outside. No "menu vs reality"
+                disappointment here. It's helpful, honest, and artistic.</p>
+        </div>
+
+        <div class="mood-box">
+            <h3>💡 Culture Note <span class="badge">SHOKUHIN SAMPLE</span></h3>
+            <p>"Shokuhin Sample" (Food Samples) is a huge craftsmanship industry in Japan. They are handmade from wax or
+                plastic to replicate the restaurant's actual dishes perfectly.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with ✨ for Japan lovers | 2026
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
