@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Lost My Wallet in Japan</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --accent-pink: #ff85a1;
+            --accent-blue: #74c0fc;
+            --text-dark: #2d3436;
+            --soft-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .feed {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #4834d4;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .sub-caption {
+            font-size: 0.95rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        .mood-box {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #d1d8e0;
+        }
+
+        .badge {
+            background: #ffbe76;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #a4b0be;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <a href="../../prototype_html/index_phase1.html#discover" class="back-link">
+            <i data-lucide="arrow-left"></i> Back
+        </a>
+        <h1>I Lost My Wallet in Japan 🇯🇵</h1>
+        <p>A true story about panic, despair, and incredible honesty.</p>
+    </div>
+
+    <div class="feed">
+
+        <!-- Scene 1 -->
+        <div class="post-card">
+            <span class="tag">#ThePanic</span>
+            <h2>Everything Was Gone</h2>
+            <img src="project01_01.png" alt="Panic at station">
+            <p class="caption"><b>"I LOST MY WALLET."</b></p>
+            <p class="sub-caption">Everything was inside...</p>
+            <p>It happened at the busiest station in Tokyo. One moment it was there, and the next—gone. Credits cards,
+                ID, cash. My entire life was in that small leather square.</p>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="post-card">
+            <span class="tag">#Hopelessness</span>
+            <h2>Fearing the Worst</h2>
+            <img src="project01_02.png" alt="Despair outside Koban">
+            <p class="caption"><b>"In my country... it would be gone."</b></p>
+            <p>I walked to the Koban (police box) with heavy steps. Back home, a lost wallet means it's gone forever. I
+                was already mentally cancelling my cards and planning my flight home.</p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="post-card">
+            <span class="tag">#TheMiracle</span>
+            <h2>Disbelief</h2>
+            <img src="project01_03.png" alt="Police finding wallet">
+            <p class="caption"><b>"They FOUND it."</b></p>
+            <p class="sub-caption">Nothing was missing.</p>
+            <p>The officer simply smiled and handed it over. Cash, cards, everything. Untouched. I stood there in shock,
+                unable to process kindness this pure.</p>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="post-card">
+            <span class="tag">#Gratitude</span>
+            <h2>More Than Money</h2>
+            <img src="project01_04.png" alt="Tears of relief">
+            <p class="caption"><b>"I didn’t just get my wallet back..."</b></p>
+            <p class="sub-caption">I found trust.</p>
+            <p>Japan didn't just return my belongings; it restored my faith in people. This is the safety and honesty
+                that makes this country truly special.</p>
+        </div>
+
+        <div class="mood-box">
+            <h3>💡 Travel Tip <span class="badge">KEY INFO</span></h3>
+            <p>If you lose something in Japan, <b>don't give up!</b> Go to the nearest <i>Koban</i> (police box). There
+                is an extremely high chance someone turned it in. Japan's lost-and-found system is world-class!</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with ✨ for Japan lovers | 2026
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
