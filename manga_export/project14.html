@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Running Station Staff 🇯🇵</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --accent-pink: #ff85a1;
+            --accent-blue: #74c0fc;
+            --text-dark: #2d3436;
+            --soft-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .feed {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #4834d4;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .sub-caption {
+            font-size: 0.95rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        .mood-box {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #d1d8e0;
+        }
+
+        .badge {
+            background: #ffbe76;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #a4b0be;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <a href="../../prototype_html/index_phase1.html#discover" class="back-link">
+            <i data-lucide="arrow-left"></i> Back
+        </a>
+        <h1>Why Are They Running? 🇯🇵</h1>
+        <p>The dedication of Japanese train staff.</p>
+    </div>
+
+    <div class="feed">
+
+        <!-- Scene 1 -->
+        <div class="post-card">
+            <span class="tag">#Confusion</span>
+            <h2>Sudden Sprint</h2>
+            <img src="project14_01.png" alt="Station staff sprinting">
+            <p class="caption"><b>"Why is he running?!"</b></p>
+            <p>You're standing on a platform, and suddenly a station attendant sprints past you. Is there an emergency?
+                Did someone fall?</p>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="post-card">
+            <span class="tag">#Shock</span>
+            <h2>The Countdown</h2>
+            <img src="project14_02.png" alt="Staff running seriously">
+            <p class="caption"><b>"The train leaves in 30 seconds."</b></p>
+            <p>No emergency. He's just sprinting to check that the far end of the train is clear before departure. He
+                has seconds to do it.</p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="post-card">
+            <span class="tag">#Safety</span>
+            <h2>Precision Safety</h2>
+            <img src="project14_03.png" alt="Staff checking doors">
+            <p class="caption"><b>"They’re making sure everyone is safe."</b></p>
+            <p class="sub-caption">And on time.</p>
+            <p>They point and call everything. "Doors clear. Platform clear." The running isn't panic; it's a calculated
+                effort to maintain the world's strictest schedule safely.</p>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="post-card">
+            <span class="tag">#Respect</span>
+            <h2>Responsibility</h2>
+            <img src="project14_04.png" alt="Train departing on time">
+            <p class="caption"><b>"It’s not rushing."</b></p>
+            <p class="sub-caption">It’s responsibility.</p>
+            <p>As the train glides away exactly on the second, he bows. It's a level of professional pride and
+                dedication that keeps Tokyo moving.</p>
+        </div>
+
+        <div class="mood-box">
+            <h3>💡 Culture Note <span class="badge">POINT AND CALL</span></h3>
+            <p>"Shisa Kanko" (Pointing and Calling) is a safety method used in Japan. By physically pointing and
+                vocalizing checks, errors are reduced by up to 85%!</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with ✨ for Japan lovers | 2026
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
