@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 50% Off Sticker Strategy 🇯🇵</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --accent-pink: #ff85a1;
+            --accent-blue: #74c0fc;
+            --text-dark: #2d3436;
+            --soft-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .feed {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: #4834d4;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+
+        .sub-caption {
+            font-size: 0.95rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        .mood-box {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #d1d8e0;
+        }
+
+        .badge {
+            background: #ffbe76;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #a4b0be;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <a href="../../prototype_html/index_phase1.html#discover" class="back-link">
+            <i data-lucide="arrow-left"></i> Back
+        </a>
+        <h1>The 50% Off Battle 🇯🇵</h1>
+        <p>A Japanese supermarket tradition.</p>
+    </div>
+
+    <div class="feed">
+
+        <!-- Scene 1 -->
+        <div class="post-card">
+            <span class="tag">#Shopping</span>
+            <h2>Evening Routine</h2>
+            <img src="project13_01.png" alt="Traveler shopping in supermarket">
+            <p class="caption"><b>"Just grabbing dinner."</b></p>
+            <p>It's late evening in a Japanese supermarket. I was just casually looking for a bento box for dinner,
+                ready to pay full price.</p>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="post-card">
+            <span class="tag">#Shock</span>
+            <h2>The Sticker God</h2>
+            <img src="project13_02.png" alt="Staff placing discount sticker">
+            <p class="caption"><b>"Wait… 50% OFF?!"</b></p>
+            <p>Then, HE appeared. The staff member with the sticker gun. He slapped a bright red "Hangaku" (Half Price)
+                sticker right in front of me.</p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="post-card">
+            <span class="tag">#Strategy</span>
+            <h2>Silent Battle</h2>
+            <img src="project13_03.png" alt="Shoppers competing quietly">
+            <p class="caption"><b>"It’s like a silent battle."</b></p>
+            <p class="sub-caption">No one says a word.</p>
+            <p>Suddenly, the atmosphere changed. Housewives, salarymen, students—everyone moved in. Polite but fast. It
+                was a game of speed and strategy.</p>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="post-card">
+            <span class="tag">#Victory</span>
+            <h2>Mission Accomplished</h2>
+            <img src="project13_04.png" alt="Traveler holding discounted bento">
+            <p class="caption"><b>"Dinner secured."</b></p>
+            <p class="sub-caption">Half the price.</p>
+            <p>I managed to snag one! The thrill of the hunt made the meal taste even better. In Japan, timing is
+                everything.</p>
+        </div>
+
+        <div class="mood-box">
+            <h3>💡 Culture Note <span class="badge">HANGAKU</span></h3>
+            <p>"Hangaku" (半額) means half-price. Japanese supermarkets discount perishable food heavily in the evening to
+                reduce waste. It's a popular way to save money!</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Made with ✨ for Japan lovers | 2026
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
